@@ -2,7 +2,7 @@ package it.unibz.inf.ontop.si.repository.impl;
 
 import it.unibz.inf.ontop.spec.ontology.*;
 import it.unibz.inf.ontop.spec.ontology.ClassifiedTBox;
-import org.jgrapht.DirectedGraph;
+import org.jgrapht.Graph;
 import org.jgrapht.Graphs;
 import org.jgrapht.event.ConnectedComponentTraversalEvent;
 import org.jgrapht.event.TraversalListenerAdapter;
@@ -46,10 +46,10 @@ public class SemanticIndexBuilder  {
 		private T reference; 		//last root node
 		private boolean newComponent = true;
 
-		private final DirectedGraph <T,DefaultEdge> namedDAG;
+		private final Graph <T,DefaultEdge> namedDAG;
 		private final Map<T, SemanticIndexRange> ranges;
 		
-		public SemanticIndexer(DirectedGraph<T,DefaultEdge> namedDAG, Map<T, SemanticIndexRange> ranges) {
+		public SemanticIndexer(Graph<T,DefaultEdge> namedDAG, Map<T, SemanticIndexRange> ranges) {
 			this.namedDAG = namedDAG;
 			this.ranges = ranges;
 		}
@@ -95,9 +95,9 @@ public class SemanticIndexBuilder  {
 
 	private <T> Map<T, SemanticIndexRange> createSemanticIndex(EquivalencesDAG<T> dag) {
 		
-		DirectedGraph<T, DefaultEdge> namedDag = getNamedDAG(dag);
+		Graph<T, DefaultEdge> namedDag = getNamedDAG(dag);
 		// reverse the named dag so that we give smallest indexes to ? 
-		DirectedGraph<T, DefaultEdge> reversed = new EdgeReversedGraph<>(namedDag);
+		Graph<T, DefaultEdge> reversed = new EdgeReversedGraph<>(namedDag);
 		
 		LinkedList<T> roots = new LinkedList<>();
 		for (T n : reversed.vertexSet()) 
