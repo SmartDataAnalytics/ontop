@@ -105,9 +105,9 @@ public class SimpleMappingVirtualABoxTest extends TestCase {
             OWLObject ind1 = bindingSet.getOWLObject("x");
 			OWLObject ind2 = bindingSet.getOWLObject("y");
 			OWLObject val = bindingSet.getOWLObject("z");
-			assertEquals("<http://example.org/uri1>", ToStringRenderer.getInstance().getRendering(ind1));
-			assertEquals("<http://example.org/uri1>", ToStringRenderer.getInstance().getRendering(ind2));
-			assertEquals("\"value1\"^^xsd:string", ToStringRenderer.getInstance().getRendering(val));
+			assertEquals("<http://example.org/uri1>", ToStringRenderer.getInstance().render(ind1));
+			assertEquals("<http://example.org/uri1>", ToStringRenderer.getInstance().render(ind2));
+			assertEquals("\"value1\"^^xsd:string", ToStringRenderer.getInstance().render(val));
 		}
 		finally {
 			try {

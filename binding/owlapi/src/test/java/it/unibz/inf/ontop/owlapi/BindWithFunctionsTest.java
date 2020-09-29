@@ -1128,7 +1128,7 @@ public class BindWithFunctionsTest {
                 while (rs.hasNext()) {
                     final OWLBindingSet bindingSet = rs.next();
                     OWLObject ind1 = bindingSet.getOWLObject("w");
-                    String value = ToStringRenderer.getInstance().getRendering(ind1);
+                    String value = ToStringRenderer.getInstance().render(ind1);
                     // log.debug(ind1.toString());
                     returnedValues.add(value);
                     java.lang.System.out.println(value);

@@ -112,7 +112,7 @@ public class ComplexSelectMappingVirtualABoxTest  {
 		finally {
 			reasoner.dispose();
 		}
-        return ToStringRenderer.getInstance().getRendering(val);
+        return ToStringRenderer.getInstance().render(val);
 	}
 
     @Test

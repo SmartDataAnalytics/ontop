@@ -1386,7 +1386,7 @@ public abstract class AbstractBindTestWithFunctions {
                     // log.debug(ind1.toString());
 
                     if (ind1 != null) {
-                        String value = ToStringRenderer.getInstance().getRendering(ind1);
+                        String value = ToStringRenderer.getInstance().render(ind1);
                         returnedValues.add(value);
                         log.debug(value);
                     }
