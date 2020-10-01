@@ -7,6 +7,10 @@
 |-----------|---------------|
 | [master](https://github.com/ontop/ontop/tree/master)  |[![Build Status](https://travis-ci.org/ontop/ontop.svg?branch=master)](https://travis-ci.org/ontop/ontop)|
 | [version4](https://github.com/ontop/ontop/tree/version4) |[![Build Status](https://travis-ci.org/ontop/ontop.svg?branch=version4)](https://travis-ci.org/ontop/ontop)|
+Fork
+====
+This is a fork of the Ontop OBDA system. The main difference to the original project is an [additional branch](https://github.com/SmartDataAnalytics/ontop/tree/owlapiv5) which makes Ontop working with OWL API v5.
+Note, the Protege plugin hasn't been changed because i) we don't use it at all and ii) Protege is still based on OWL API v4.
 
 
 Ontop
