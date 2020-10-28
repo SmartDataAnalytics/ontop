@@ -169,7 +169,7 @@ public class OWLResultSetTableModel implements TableModel {
 
                 OWLPropertyAssertionObject constant = bindingSet.getOWLPropertyAssertionObject(signature.get(j));
 				if (constant != null) {
-                    crow[j] = ToStringRenderer.getInstance().getRendering(constant);
+                    crow[j] = ToStringRenderer.getInstance().render(constant);
 				}
 				else {
 					crow[j] = "";

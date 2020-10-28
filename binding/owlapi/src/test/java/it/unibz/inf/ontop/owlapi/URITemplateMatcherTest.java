@@ -144,7 +144,7 @@ public class URITemplateMatcherTest {
 					for (String name : res.getSignature()) {
 						log.debug("Example result " + name + " = " + bindingSet.getOWLObject(name));
 					}
-					result = ToStringRenderer.getInstance().getRendering(bindingSet.getOWLObject("s"));
+					result = ToStringRenderer.getInstance().render(bindingSet.getOWLObject("s"));
 				}
 			}
 			log.debug("Total results: {}", count);

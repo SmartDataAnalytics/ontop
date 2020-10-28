@@ -127,7 +127,7 @@ public class MetaMappingVirtualABoxTest {
 			//OWLLiteral val = rs2.getOWLLiteral("y");
             assertEquals("<http://example.org/uri1>", ind1.toString());
             assertEquals("<http://example.org/A>", ind2.toString());
-            //assertEquals("\"A\"^^xsd:string", ToStringRenderer.getInstance().getRendering(val));
+            //assertEquals("\"A\"^^xsd:string", ToStringRenderer.getInstance().render(val));
         }
 	}
 
