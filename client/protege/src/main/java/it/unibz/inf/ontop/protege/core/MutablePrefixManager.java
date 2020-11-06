@@ -108,7 +108,7 @@ public class MutablePrefixManager extends AbstractPrefixManager {
 	}
 
 	static Optional<String> generateDefaultPrefixNamespaceFromID(OWLOntologyID ontologyID) {
-		java.util.Optional<IRI> ontologyIRI = ontologyID.getOntologyIRI();
+		com.google.common.base.Optional<IRI> ontologyIRI = ontologyID.getOntologyIRI();
 		return ontologyIRI.isPresent()?
 				Optional.of(getProperPrefixURI(ontologyIRI.get().toString())):
 				Optional.empty();

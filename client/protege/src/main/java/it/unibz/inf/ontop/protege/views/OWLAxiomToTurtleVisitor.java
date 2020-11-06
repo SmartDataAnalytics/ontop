@@ -52,7 +52,7 @@ public class OWLAxiomToTurtleVisitor extends OWLAxiomVisitorAdapter {
 	public void visit(OWLDataPropertyAssertionAxiom axiom) {
 		String subject = prefixManager.getShortForm(axiom.getSubject().toString());
 		String predicate = prefixManager.getShortForm(axiom.getProperty().toString());
-		String object = ToStringRenderer.getInstance().render(axiom.getObject());
+		String object = ToStringRenderer.getInstance().getRendering(axiom.getObject());
 		dataPropertyAssertionBuffer.append(String.format("%s %s %s .\n",
 				subject, predicate, object));
 	}
@@ -61,7 +61,7 @@ public class OWLAxiomToTurtleVisitor extends OWLAxiomVisitorAdapter {
 	public void visit(OWLAnnotationAssertionAxiom axiom) {
 		String subject = prefixManager.getShortForm(axiom.getSubject().toString());
 		String predicate = prefixManager.getShortForm(axiom.getProperty().toString());
-		String object = ToStringRenderer.getInstance().render(axiom.getValue());
+		String object = ToStringRenderer.getInstance().getRendering(axiom.getValue());
 		dataPropertyAssertionBuffer.append(String.format("%s %s %s .\n",
 				subject, predicate, object));
 	}
