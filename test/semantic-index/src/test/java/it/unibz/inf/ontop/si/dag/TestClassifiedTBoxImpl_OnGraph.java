@@ -27,7 +27,8 @@ import it.unibz.inf.ontop.spec.ontology.impl.ClassifiedTBoxImpl;
 import java.util.*;
 import java.util.stream.Stream;
 
-import org.jgrapht.alg.StrongConnectivityInspector;
+import org.jgrapht.alg.connectivity.GabowStrongConnectivityInspector;
+import org.jgrapht.alg.interfaces.StrongConnectivityAlgorithm;
 import org.jgrapht.graph.DefaultDirectedGraph;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.graph.EdgeReversedGraph;
@@ -141,7 +142,7 @@ public class TestClassifiedTBoxImpl_OnGraph implements ClassifiedTBox {
 		@Override
 		public Equivalences<T> getVertex(T desc) {
 			// search for cycles
-			StrongConnectivityInspector<T, DefaultEdge> inspector = new StrongConnectivityInspector<T, DefaultEdge>(graph);
+			StrongConnectivityAlgorithm<T, DefaultEdge> inspector = new GabowStrongConnectivityInspector<T, DefaultEdge>(graph);
 
 			// each set contains vertices which together form a strongly
 			// connected component within the given graph

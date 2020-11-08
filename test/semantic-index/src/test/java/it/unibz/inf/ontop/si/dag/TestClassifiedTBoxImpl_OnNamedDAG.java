@@ -27,7 +27,7 @@ import com.google.common.collect.ImmutableSet;
 import it.unibz.inf.ontop.spec.ontology.*;
 import it.unibz.inf.ontop.si.repository.impl.SemanticIndexBuilder;
 import it.unibz.inf.ontop.spec.ontology.impl.ClassifiedTBoxImpl;
-import org.jgrapht.DirectedGraph;
+import org.jgrapht.Graph;
 import org.jgrapht.Graphs;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.graph.EdgeReversedGraph;
@@ -195,7 +195,7 @@ public class TestClassifiedTBoxImpl_OnNamedDAG implements ClassifiedTBox {
 			
 			LinkedHashSet<Equivalences<T>> result = new LinkedHashSet<Equivalences<T>>();
 			// reverse the dag
-			DirectedGraph<T, DefaultEdge> reversed = new EdgeReversedGraph<T, DefaultEdge>(dag);
+			Graph<T, DefaultEdge> reversed = new EdgeReversedGraph<T, DefaultEdge>(dag);
 			BreadthFirstIterator<T, DefaultEdge>  iterator = new BreadthFirstIterator<T, DefaultEdge>(reversed, node);
 
 			while (iterator.hasNext()) {
