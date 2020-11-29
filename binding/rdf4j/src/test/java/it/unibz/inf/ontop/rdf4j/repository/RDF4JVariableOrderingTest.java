@@ -1,7 +1,7 @@
 package it.unibz.inf.ontop.rdf4j.repository;
 
 
-import com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
 import it.unibz.inf.ontop.utils.ImmutableCollectors;
 import org.eclipse.rdf4j.query.Binding;
 import org.eclipse.rdf4j.query.BindingSet;

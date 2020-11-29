@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.generation.algebra.impl;
 
-import com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
 import com.google.inject.assistedinject.Assisted;
 import com.google.inject.assistedinject.AssistedInject;
 import it.unibz.inf.ontop.generation.algebra.SQLNaryJoinExpression;

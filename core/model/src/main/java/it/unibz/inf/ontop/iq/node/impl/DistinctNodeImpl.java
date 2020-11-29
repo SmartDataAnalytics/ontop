@@ -1,7 +1,7 @@
 package it.unibz.inf.ontop.iq.node.impl;
 
-import com.google.common.collect.ImmutableSet;
-import com.google.common.collect.Sets;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableSet;
+import it.unibz.inf.ontop.com.google.common.collect.Sets;
 import com.google.inject.Inject;
 import it.unibz.inf.ontop.injection.IntermediateQueryFactory;
 import it.unibz.inf.ontop.iq.IQProperties;

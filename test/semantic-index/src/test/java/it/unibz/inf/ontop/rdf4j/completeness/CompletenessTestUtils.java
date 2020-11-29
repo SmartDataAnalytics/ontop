@@ -1,7 +1,7 @@
 package it.unibz.inf.ontop.rdf4j.completeness;
 
-import com.google.common.collect.ImmutableSet;
-import com.google.common.collect.Lists;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableSet;
+import it.unibz.inf.ontop.com.google.common.collect.Lists;
 import org.eclipse.rdf4j.OpenRDFUtil;
 import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.ValueFactory;

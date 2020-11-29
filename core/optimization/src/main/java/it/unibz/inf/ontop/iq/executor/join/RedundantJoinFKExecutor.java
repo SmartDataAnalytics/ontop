@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.iq.executor.join;
 
-import com.google.common.collect.*;
+import it.unibz.inf.ontop.com.google.common.collect.*;
 import com.google.inject.Inject;
 import it.unibz.inf.ontop.dbschema.*;
 import it.unibz.inf.ontop.injection.IntermediateQueryFactory;

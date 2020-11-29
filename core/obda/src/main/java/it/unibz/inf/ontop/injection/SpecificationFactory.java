@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.injection;
 
-import com.google.common.collect.ImmutableMap;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMap;
 import it.unibz.inf.ontop.dbschema.DBParameters;
 import it.unibz.inf.ontop.spec.OBDASpecification;
 import it.unibz.inf.ontop.spec.mapping.Mapping;

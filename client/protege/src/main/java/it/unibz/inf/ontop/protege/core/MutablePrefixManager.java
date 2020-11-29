@@ -20,6 +20,7 @@ package it.unibz.inf.ontop.protege.core;
  * #L%
  */
 
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableMap;
 import it.unibz.inf.ontop.spec.mapping.impl.AbstractPrefixManager;
 import org.protege.editor.owl.model.entity.EntityCreationPreferences;
@@ -59,8 +60,8 @@ public class MutablePrefixManager extends AbstractPrefixManager {
 	}
 
 	@Override
-	public ImmutableMap<String, String> getPrefixMap() {
-		return ImmutableMap.copyOf(owlmapper.getPrefixName2PrefixMap());
+	public it.unibz.inf.ontop.com.google.common.collect.ImmutableMap<String, String> getPrefixMap() {
+		return it.unibz.inf.ontop.com.google.common.collect.ImmutableMap.copyOf(owlmapper.getPrefixName2PrefixMap());
 	}
 
 	@Override

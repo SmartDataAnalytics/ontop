@@ -20,7 +20,7 @@ package it.unibz.inf.ontop.spec.ontology;
 * #L%
 */
 
-import com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
 
 /**
  * Represents the following from OWL 2 QL Specification:

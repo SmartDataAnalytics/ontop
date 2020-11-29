@@ -1,7 +1,7 @@
 package it.unibz.inf.ontop.injection.impl;
 
 
-import com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
 import com.google.inject.Module;
 import it.unibz.inf.ontop.datalog.UnionFlattener;
 import it.unibz.inf.ontop.injection.OntopOptimizationConfiguration;

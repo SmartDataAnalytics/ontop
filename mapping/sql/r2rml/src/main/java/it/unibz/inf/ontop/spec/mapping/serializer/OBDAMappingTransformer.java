@@ -1,8 +1,8 @@
 package it.unibz.inf.ontop.spec.mapping.serializer;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.ImmutableMultimap;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMap;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMultimap;
 import eu.optique.r2rml.api.binding.rdf4j.RDF4JR2RMLMappingManager;
 import eu.optique.r2rml.api.model.*;
 import it.unibz.inf.ontop.exception.InvalidPrefixWritingException;

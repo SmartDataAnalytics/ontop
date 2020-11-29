@@ -20,7 +20,7 @@ package it.unibz.inf.ontop.docker.testsuite;
  * #L%
  */
 
-import com.google.common.collect.ImmutableSet;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableSet;
 import it.unibz.inf.ontop.docker.utils.ManifestTestUtils;
 import it.unibz.inf.ontop.docker.utils.OntopTestCase;
 import it.unibz.inf.ontop.docker.utils.RepositoryRegistry;

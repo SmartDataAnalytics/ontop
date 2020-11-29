@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.si.repository.impl;
 
-import com.google.common.collect.ImmutableMap;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMap;
 import it.unibz.inf.ontop.model.vocabulary.OntopInternal;
 import it.unibz.inf.ontop.model.vocabulary.RDF;
 import it.unibz.inf.ontop.model.vocabulary.XSD;

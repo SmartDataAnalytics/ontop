@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.test.sparql;
 
-import com.google.common.collect.ImmutableSet;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableSet;
 import junit.framework.TestCase;
 import org.eclipse.rdf4j.query.Dataset;
 import org.junit.Test;

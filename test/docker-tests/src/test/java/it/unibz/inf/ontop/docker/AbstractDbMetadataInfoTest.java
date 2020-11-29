@@ -20,7 +20,7 @@ package it.unibz.inf.ontop.docker;
  * #L%
  */
 
-import com.google.common.base.Joiner;
+import it.unibz.inf.ontop.com.google.common.base.Joiner;
 import junit.framework.TestCase;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

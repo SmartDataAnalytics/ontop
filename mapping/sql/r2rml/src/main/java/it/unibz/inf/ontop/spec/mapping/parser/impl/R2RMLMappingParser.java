@@ -1,8 +1,8 @@
 package it.unibz.inf.ontop.spec.mapping.parser.impl;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Lists;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMap;
+import it.unibz.inf.ontop.com.google.common.collect.Lists;
 import com.google.inject.Inject;
 import eu.optique.r2rml.api.model.PredicateObjectMap;
 import eu.optique.r2rml.api.model.RefObjectMap;

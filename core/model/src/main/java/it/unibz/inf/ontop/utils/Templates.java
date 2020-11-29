@@ -20,8 +20,8 @@ package it.unibz.inf.ontop.utils;
  * #L%
  */
 
-import com.google.common.base.Splitter;
-import com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.base.Splitter;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
 import it.unibz.inf.ontop.model.term.*;
 import it.unibz.inf.ontop.model.term.functionsymbol.db.DBConcatFunctionSymbol;
 import it.unibz.inf.ontop.model.term.functionsymbol.db.IRIStringTemplateFunctionSymbol;

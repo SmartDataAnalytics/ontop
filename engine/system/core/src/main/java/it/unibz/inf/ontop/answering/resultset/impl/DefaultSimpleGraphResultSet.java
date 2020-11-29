@@ -20,7 +20,7 @@ package it.unibz.inf.ontop.answering.resultset.impl;
  * #L%
  */
 
-import com.google.common.collect.ImmutableMap;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMap;
 import it.unibz.inf.ontop.answering.reformulation.input.ConstructTemplate;
 import it.unibz.inf.ontop.answering.resultset.OntopBindingSet;
 import it.unibz.inf.ontop.answering.resultset.SimpleGraphResultSet;

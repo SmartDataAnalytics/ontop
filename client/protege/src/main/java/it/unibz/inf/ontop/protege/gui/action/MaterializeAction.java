@@ -20,7 +20,7 @@ package it.unibz.inf.ontop.protege.gui.action;
  * #L%
  */
 
-import com.google.common.collect.Sets;
+import it.unibz.inf.ontop.com.google.common.collect.Sets;
 import it.unibz.inf.ontop.owlapi.resultset.MaterializedGraphOWLResultSet;
 import it.unibz.inf.ontop.protege.utils.OBDAProgressListener;
 import org.semanticweb.owlapi.model.OWLAxiom;

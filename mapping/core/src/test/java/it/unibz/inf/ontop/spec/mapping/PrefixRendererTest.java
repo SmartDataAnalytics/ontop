@@ -22,7 +22,7 @@ package it.unibz.inf.ontop.spec.mapping;
 
 import java.util.*;
 
-import com.google.common.collect.ImmutableMap;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMap;
 import junit.framework.TestCase;
 
 import static it.unibz.inf.ontop.utils.MappingTestingTools.*;

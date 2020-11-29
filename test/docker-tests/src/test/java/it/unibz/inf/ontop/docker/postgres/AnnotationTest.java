@@ -1,8 +1,8 @@
 package it.unibz.inf.ontop.docker.postgres;
 
 
-import com.google.common.base.Joiner;
-import com.google.common.io.CharStreams;
+import it.unibz.inf.ontop.com.google.common.base.Joiner;
+import it.unibz.inf.ontop.com.google.common.io.CharStreams;
 import it.unibz.inf.ontop.docker.AbstractVirtualModeTest;
 import it.unibz.inf.ontop.owlapi.OntopOWLReasoner;
 import it.unibz.inf.ontop.owlapi.connection.OntopOWLConnection;

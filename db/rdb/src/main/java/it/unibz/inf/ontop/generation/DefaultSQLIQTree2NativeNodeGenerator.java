@@ -1,7 +1,7 @@
 package it.unibz.inf.ontop.generation;
 
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.ImmutableSortedSet;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMap;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableSortedSet;
 import com.google.inject.Inject;
 import it.unibz.inf.ontop.iq.transform.IQTree2NativeNodeGenerator;
 import it.unibz.inf.ontop.generation.algebra.IQTree2SelectFromWhereConverter;

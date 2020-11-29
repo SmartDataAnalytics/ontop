@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.test.sparql11;
 
-import com.google.common.collect.ImmutableSet;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableSet;
 import it.unibz.inf.ontop.test.sparql.ManifestTestUtils;
 import it.unibz.inf.ontop.test.sparql.MemoryOntopTestCase;
 import org.eclipse.rdf4j.query.Dataset;

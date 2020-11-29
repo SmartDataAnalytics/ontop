@@ -1,7 +1,7 @@
 package it.unibz.inf.ontop.iq.tools.impl;
 
-import com.google.common.collect.HashBiMap;
-import com.google.common.collect.ImmutableBiMap;
+import it.unibz.inf.ontop.com.google.common.collect.HashBiMap;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableBiMap;
 import com.google.inject.Inject;
 import it.unibz.inf.ontop.exception.MinorOntopInternalBugException;
 import it.unibz.inf.ontop.iq.tools.TypeConstantDictionary;

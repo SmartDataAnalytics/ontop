@@ -1,7 +1,7 @@
 package it.unibz.inf.ontop.spec.mapping.impl;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.Maps;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.Maps;
 import com.google.inject.Inject;
 import it.unibz.inf.ontop.model.atom.AtomFactory;
 import it.unibz.inf.ontop.model.atom.DistinctVariableOnlyDataAtom;

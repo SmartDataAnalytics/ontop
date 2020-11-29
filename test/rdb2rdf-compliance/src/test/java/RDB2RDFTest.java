@@ -18,12 +18,12 @@
  * #L%
  */
 
-import com.google.common.base.Charsets;
-import com.google.common.base.Objects;
-import com.google.common.base.Preconditions;
-import com.google.common.collect.ImmutableSet;
-import com.google.common.collect.Lists;
-import com.google.common.io.Resources;
+import it.unibz.inf.ontop.com.google.common.base.Charsets;
+import it.unibz.inf.ontop.com.google.common.base.Objects;
+import it.unibz.inf.ontop.com.google.common.base.Preconditions;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableSet;
+import it.unibz.inf.ontop.com.google.common.collect.Lists;
+import it.unibz.inf.ontop.com.google.common.io.Resources;
 import it.unibz.inf.ontop.exception.MappingBootstrappingException;
 import it.unibz.inf.ontop.exception.MappingException;
 import it.unibz.inf.ontop.injection.OntopMappingSettings;

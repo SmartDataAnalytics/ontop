@@ -1,10 +1,10 @@
 package it.unibz.inf.ontop.evaluator.impl;
 
-import com.google.common.cache.Cache;
-import com.google.common.cache.CacheBuilder;
-import com.google.common.cache.CacheBuilderSpec;
-import com.google.common.collect.ImmutableSet;
-import com.google.common.collect.Maps;
+import it.unibz.inf.ontop.com.google.common.cache.Cache;
+import it.unibz.inf.ontop.com.google.common.cache.CacheBuilder;
+import it.unibz.inf.ontop.com.google.common.cache.CacheBuilderSpec;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableSet;
+import it.unibz.inf.ontop.com.google.common.collect.Maps;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import it.unibz.inf.ontop.evaluator.TermNullabilityEvaluator;

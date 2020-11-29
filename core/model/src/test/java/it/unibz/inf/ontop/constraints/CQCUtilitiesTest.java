@@ -20,7 +20,7 @@ package it.unibz.inf.ontop.constraints;
  * #L%
  */
 
-import com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
 import it.unibz.inf.ontop.constraints.impl.BasicLinearInclusionDependenciesImpl;
 import it.unibz.inf.ontop.constraints.impl.LinearInclusionDependenciesImpl;
 import it.unibz.inf.ontop.constraints.impl.ImmutableCQContainmentCheckUnderLIDs;

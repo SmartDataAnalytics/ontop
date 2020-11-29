@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.spec.mapping.sqlparser;
 
-import com.google.common.collect.*;
+import it.unibz.inf.ontop.com.google.common.collect.*;
 import it.unibz.inf.ontop.model.term.ImmutableTerm;
 import it.unibz.inf.ontop.dbschema.QualifiedAttributeID;
 import it.unibz.inf.ontop.dbschema.QuotedID;

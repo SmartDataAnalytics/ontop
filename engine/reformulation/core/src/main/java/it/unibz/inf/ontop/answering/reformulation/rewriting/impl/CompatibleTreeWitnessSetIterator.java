@@ -21,8 +21,8 @@ package it.unibz.inf.ontop.answering.reformulation.rewriting.impl;
  */
 
 
-import com.google.common.collect.ImmutableCollection;
-import com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableCollection;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
 
 import java.util.*;
 

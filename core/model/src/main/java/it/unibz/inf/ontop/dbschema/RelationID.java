@@ -22,7 +22,7 @@ package it.unibz.inf.ontop.dbschema;
  */
 
 
-import com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
 
 /**
  * Database identifier used for possibly qualified table names and aliases

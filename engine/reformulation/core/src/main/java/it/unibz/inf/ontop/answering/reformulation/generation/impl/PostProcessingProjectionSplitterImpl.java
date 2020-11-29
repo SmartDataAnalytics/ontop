@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.answering.reformulation.generation.impl;
 
-import com.google.common.collect.ImmutableSet;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableSet;
 import com.google.inject.Inject;
 import it.unibz.inf.ontop.answering.reformulation.generation.PostProcessingProjectionSplitter;
 import it.unibz.inf.ontop.injection.IntermediateQueryFactory;

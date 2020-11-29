@@ -1,7 +1,7 @@
 package it.unibz.inf.ontop.model.atom;
 
 
-import com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
 import it.unibz.inf.ontop.model.term.ImmutableTerm;
 import org.apache.commons.rdf.api.IRI;
 

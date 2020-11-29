@@ -1,7 +1,7 @@
 package it.unibz.inf.ontop.docker.postgres;
 
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.ImmutableSet;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMap;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableSet;
 import it.unibz.inf.ontop.docker.AbstractDistinctInAggregateTest;
 import org.junit.BeforeClass;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;

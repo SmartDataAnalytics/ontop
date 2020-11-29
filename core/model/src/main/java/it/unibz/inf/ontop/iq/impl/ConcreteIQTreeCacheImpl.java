@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.iq.impl;
 
-import com.google.common.collect.ImmutableSet;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableSet;
 import it.unibz.inf.ontop.injection.CoreSingletons;
 import it.unibz.inf.ontop.iq.ConcreteIQTreeCache;
 import it.unibz.inf.ontop.iq.IQProperties;

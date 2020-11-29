@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.endpoint.controllers;
 
-import com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
 import it.unibz.inf.ontop.endpoint.OntopEndpointApplication;
 import it.unibz.inf.ontop.utils.ImmutableCollectors;
 import org.slf4j.Logger;

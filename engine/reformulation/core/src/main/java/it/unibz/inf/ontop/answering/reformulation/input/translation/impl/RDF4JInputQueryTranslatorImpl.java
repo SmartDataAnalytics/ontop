@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.answering.reformulation.input.translation.impl;
 
-import com.google.common.collect.*;
+import it.unibz.inf.ontop.com.google.common.collect.*;
 import com.google.inject.Inject;
 import it.unibz.inf.ontop.answering.reformulation.input.translation.RDF4JInputQueryTranslator;
 import it.unibz.inf.ontop.exception.OntopInternalBugException;

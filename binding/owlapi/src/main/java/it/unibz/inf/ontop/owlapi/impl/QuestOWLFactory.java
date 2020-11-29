@@ -34,7 +34,7 @@ import org.slf4j.LoggerFactory;
 import javax.annotation.Nonnull;
 
 
-import static com.google.common.base.Preconditions.checkArgument;
+import static it.unibz.inf.ontop.com.google.common.base.Preconditions.checkArgument;
 
 /***
  * TODO: rewrite the doc

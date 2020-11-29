@@ -1,7 +1,7 @@
 package it.unibz.inf.ontop.iq.optimizer;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMap;
 import it.unibz.inf.ontop.dbschema.RelationDefinition;
 import it.unibz.inf.ontop.iq.IQ;
 import it.unibz.inf.ontop.iq.NaryIQTree;

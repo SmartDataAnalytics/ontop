@@ -1,7 +1,7 @@
 package it.unibz.inf.ontop.rdf4j.query;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableSet;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableSet;
 import org.apache.commons.rdf.api.IRI;
 import org.eclipse.rdf4j.query.GraphQuery;
 

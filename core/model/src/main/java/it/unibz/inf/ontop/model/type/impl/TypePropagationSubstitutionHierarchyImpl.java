@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.model.type.impl;
 
-import com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
 import it.unibz.inf.ontop.exception.OntopInternalBugException;
 import it.unibz.inf.ontop.model.type.ConcreteNumericRDFDatatype;
 import it.unibz.inf.ontop.model.type.TypePropagationSubstitutionHierarchy;

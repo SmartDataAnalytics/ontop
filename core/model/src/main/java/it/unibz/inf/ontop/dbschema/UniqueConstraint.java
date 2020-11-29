@@ -20,7 +20,7 @@ package it.unibz.inf.ontop.dbschema;
  * #L%
  */
 
-import com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
 import it.unibz.inf.ontop.dbschema.impl.UniqueConstraintImpl;
 
 /**

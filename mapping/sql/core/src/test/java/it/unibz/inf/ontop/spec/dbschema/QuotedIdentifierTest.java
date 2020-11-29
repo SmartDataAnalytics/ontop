@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 
 import java.util.Set;
 
-import com.google.common.collect.ImmutableSet;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableSet;
 import it.unibz.inf.ontop.dbschema.*;
 import it.unibz.inf.ontop.dbschema.impl.OfflineMetadataProviderBuilder;
 import it.unibz.inf.ontop.dbschema.impl.RawQuotedIDFactory;

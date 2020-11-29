@@ -1,7 +1,7 @@
 package it.unibz.inf.ontop.answering.resultset.impl;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.Maps;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.Maps;
 import it.unibz.inf.ontop.answering.resultset.OntopBinding;
 import it.unibz.inf.ontop.answering.resultset.OntopBindingSet;
 import it.unibz.inf.ontop.exception.OntopInternalBugException;

@@ -1,7 +1,7 @@
 package it.unibz.inf.ontop.iq;
 
 import java.util.Optional;
-import com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
 import it.unibz.inf.ontop.injection.IntermediateQueryFactory;
 import it.unibz.inf.ontop.iq.exception.IntermediateQueryBuilderException;
 import it.unibz.inf.ontop.iq.node.BinaryOrderedOperatorNode;

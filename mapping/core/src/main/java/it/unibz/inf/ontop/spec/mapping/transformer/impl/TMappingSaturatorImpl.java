@@ -20,7 +20,7 @@ package it.unibz.inf.ontop.spec.mapping.transformer.impl;
  * #L%
  */
 
-import com.google.common.collect.*;
+import it.unibz.inf.ontop.com.google.common.collect.*;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import it.unibz.inf.ontop.constraints.impl.DBLinearInclusionDependenciesImpl;

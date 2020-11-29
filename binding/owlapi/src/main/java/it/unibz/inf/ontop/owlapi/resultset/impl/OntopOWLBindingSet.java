@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.owlapi.resultset.impl;
 
-import com.google.common.collect.Iterators;
+import it.unibz.inf.ontop.com.google.common.collect.Iterators;
 import it.unibz.inf.ontop.answering.resultset.OntopBinding;
 import it.unibz.inf.ontop.answering.resultset.OntopBindingSet;
 import it.unibz.inf.ontop.model.term.Constant;

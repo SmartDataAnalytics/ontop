@@ -1,7 +1,7 @@
 package it.unibz.inf.ontop.injection.impl;
 
-import com.google.common.collect.ImmutableSet;
-import com.google.common.collect.Sets;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableSet;
+import it.unibz.inf.ontop.com.google.common.collect.Sets;
 import it.unibz.inf.ontop.exception.OntologyException;
 import it.unibz.inf.ontop.injection.OntopMappingOWLAPIConfiguration;
 import it.unibz.inf.ontop.injection.OntopMappingSettings;

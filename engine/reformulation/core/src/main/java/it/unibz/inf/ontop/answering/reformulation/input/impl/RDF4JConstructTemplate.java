@@ -20,7 +20,7 @@ package it.unibz.inf.ontop.answering.reformulation.input.impl;
  * #L%
  */
 
-import com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
 import it.unibz.inf.ontop.answering.reformulation.input.ConstructTemplate;
 import it.unibz.inf.ontop.exception.MinorOntopInternalBugException;
 import org.eclipse.rdf4j.query.algebra.*;

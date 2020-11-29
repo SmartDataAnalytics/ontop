@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.model.term.functionsymbol.db;
 
-import com.google.common.collect.ImmutableMap;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMap;
 import it.unibz.inf.ontop.model.term.ImmutableTerm;
 import it.unibz.inf.ontop.model.term.NonNullConstant;
 import it.unibz.inf.ontop.model.term.functionsymbol.BooleanFunctionSymbol;

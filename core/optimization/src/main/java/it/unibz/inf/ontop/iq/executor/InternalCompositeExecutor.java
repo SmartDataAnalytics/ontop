@@ -1,7 +1,7 @@
 package it.unibz.inf.ontop.iq.executor;
 
 import java.util.Optional;
-import com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
 import it.unibz.inf.ontop.iq.exception.EmptyQueryException;
 import it.unibz.inf.ontop.iq.IntermediateQuery;
 import it.unibz.inf.ontop.iq.impl.QueryTreeComponent;

@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.generation.algebra;
 
-import com.google.common.collect.ImmutableSortedSet;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableSortedSet;
 import it.unibz.inf.ontop.iq.IQTree;
 import it.unibz.inf.ontop.model.term.Variable;
 

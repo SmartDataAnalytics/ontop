@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.spec.impl;
 
-import com.google.common.collect.ImmutableMap;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMap;
 import it.unibz.inf.ontop.spec.OBDASpecInput;
 import org.apache.commons.rdf.api.Graph;
 

@@ -1,7 +1,7 @@
 package it.unibz.inf.ontop.docker.failing.local;
 
-import com.google.common.base.Joiner;
-import com.google.common.io.CharStreams;
+import it.unibz.inf.ontop.com.google.common.base.Joiner;
+import it.unibz.inf.ontop.com.google.common.io.CharStreams;
 import it.unibz.inf.ontop.injection.OntopSQLOWLAPIConfiguration;
 import it.unibz.inf.ontop.owlapi.OntopOWLFactory;
 import it.unibz.inf.ontop.owlapi.OntopOWLReasoner;

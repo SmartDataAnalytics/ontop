@@ -1,7 +1,7 @@
 package it.unibz.inf.ontop.docker.utils;
 
-import com.google.common.collect.ImmutableSet;
-import com.google.common.collect.Lists;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableSet;
+import it.unibz.inf.ontop.com.google.common.collect.Lists;
 import it.unibz.inf.ontop.docker.ScenarioManifestTestUtils;
 import org.eclipse.rdf4j.query.*;
 import org.eclipse.rdf4j.repository.Repository;

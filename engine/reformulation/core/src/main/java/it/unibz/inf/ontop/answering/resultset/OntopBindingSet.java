@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.answering.resultset;
 
-import com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
 import it.unibz.inf.ontop.exception.OntopResultConversionException;
 import it.unibz.inf.ontop.model.term.RDFConstant;
 

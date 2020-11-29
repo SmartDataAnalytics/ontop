@@ -1,8 +1,8 @@
 package it.unibz.inf.ontop.cli;
 
 import com.github.rvesse.airline.annotations.Command;
-import com.google.common.collect.ImmutableSet;
-import com.google.common.collect.Sets;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableSet;
+import it.unibz.inf.ontop.com.google.common.collect.Sets;
 import it.unibz.inf.ontop.exception.OBDASpecificationException;
 import it.unibz.inf.ontop.injection.OntopSQLOWLAPIConfiguration;
 import org.semanticweb.owlapi.model.IRI;

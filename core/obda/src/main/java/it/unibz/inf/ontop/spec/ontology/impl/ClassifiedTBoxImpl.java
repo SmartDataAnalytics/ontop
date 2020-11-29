@@ -21,7 +21,7 @@ package it.unibz.inf.ontop.spec.ontology.impl;
  */
 
 
-import com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
 import it.unibz.inf.ontop.spec.ontology.*;
 
 import java.util.Collections;
@@ -30,7 +30,7 @@ import java.util.Comparator;
 import org.jgrapht.graph.DefaultDirectedGraph;
 import org.jgrapht.graph.DefaultEdge;
 
-import com.google.common.collect.ImmutableSet;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableSet;
 
 /**
  * ClassifiedTBoxImpl

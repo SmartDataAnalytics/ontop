@@ -1,7 +1,7 @@
 package it.unibz.inf.ontop.answering.reformulation.impl;
 
-import com.google.common.cache.Cache;
-import com.google.common.cache.CacheBuilder;
+import it.unibz.inf.ontop.com.google.common.cache.Cache;
+import it.unibz.inf.ontop.com.google.common.cache.CacheBuilder;
 import com.google.inject.Inject;
 import it.unibz.inf.ontop.answering.reformulation.input.InputQuery;
 import it.unibz.inf.ontop.answering.reformulation.QueryCache;

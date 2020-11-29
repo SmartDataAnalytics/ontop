@@ -20,7 +20,7 @@ package it.unibz.inf.ontop.spec.mapping;
  * #L%
  */
 
-import com.google.common.collect.ImmutableMap;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMap;
 
 import java.util.Optional;
 

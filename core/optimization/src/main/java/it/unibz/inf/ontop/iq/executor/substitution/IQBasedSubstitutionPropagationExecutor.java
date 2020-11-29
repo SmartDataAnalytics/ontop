@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.iq.executor.substitution;
 
-import com.google.common.collect.Sets;
+import it.unibz.inf.ontop.com.google.common.collect.Sets;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import it.unibz.inf.ontop.exception.MinorOntopInternalBugException;

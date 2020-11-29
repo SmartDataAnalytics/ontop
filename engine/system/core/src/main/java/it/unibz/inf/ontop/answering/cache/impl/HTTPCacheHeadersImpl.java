@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.answering.cache.impl;
 
-import com.google.common.collect.ImmutableMap;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMap;
 import it.unibz.inf.ontop.answering.cache.HTTPCacheHeaders;
 import it.unibz.inf.ontop.injection.OntopSystemSettings;
 

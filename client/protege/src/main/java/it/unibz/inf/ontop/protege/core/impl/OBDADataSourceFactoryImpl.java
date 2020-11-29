@@ -1,7 +1,7 @@
 package it.unibz.inf.ontop.protege.core.impl;
 
 
-import com.google.common.base.Preconditions;
+import it.unibz.inf.ontop.com.google.common.base.Preconditions;
 import it.unibz.inf.ontop.protege.core.OBDADataSource;
 import it.unibz.inf.ontop.protege.core.OBDADataSourceFactory;
 

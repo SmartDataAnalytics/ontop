@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.iq.transformer.impl;
 
-import com.google.common.collect.*;
+import it.unibz.inf.ontop.com.google.common.collect.*;
 import com.google.inject.Inject;
 import com.google.inject.assistedinject.Assisted;
 import it.unibz.inf.ontop.exception.MinorOntopInternalBugException;

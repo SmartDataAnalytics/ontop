@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.iq.executor.leftjoin;
 
-import com.google.common.collect.*;
+import it.unibz.inf.ontop.com.google.common.collect.*;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import it.unibz.inf.ontop.dbschema.*;

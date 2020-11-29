@@ -3,7 +3,7 @@
     <groupId>it.unibz.inf.ontop</groupId>
     <artifactId>ontop</artifactId>
     <packaging>pom</packaging>
-    <version>4.0.3-owlapi5</version>
+    <version>4.0.3-owlapi5-guava-shaded</version>
 
     <name>ontop</name>
     <url>http://ontop-vkg.org/</url>
@@ -67,6 +67,7 @@
         <module>mapping</module>
         <module>ontology</module>
         <module>test</module>
+        <module>ontop-shaded-guava</module>
     </modules>
 
     <profiles>
@@ -150,7 +151,10 @@
         <docker.mysql.password>mysql</docker.mysql.password>
         <docker.oracle.password>oracle</docker.oracle.password>
         <docker.pgsql.password>postgres2</docker.pgsql.password>
-        <docker.denodo.password>admin</docker.denodo.password>
+
+
+        <!-- Package to use when relocating shaded classes. -->
+        <ontop.shade.packageName>it.unibz.inf.ontop.shade</ontop.shade.packageName>
     </properties>
 
     <build>
@@ -251,6 +255,12 @@
                     <artifactId>maven-war-plugin</artifactId>
                     <version>3.3.1</version>
                 </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-shade-plugin</artifactId>
+                    <version>3.2.4</version>
+                </plugin>
+
             </plugins>
         </pluginManagement>
         <plugins>
@@ -339,6 +349,12 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>it.unibz.inf.ontop</groupId>
+                <artifactId>ontop-shaded-guava</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>

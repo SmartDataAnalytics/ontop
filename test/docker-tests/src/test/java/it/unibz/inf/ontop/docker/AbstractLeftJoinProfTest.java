@@ -1,7 +1,7 @@
 package it.unibz.inf.ontop.docker;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.Lists;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.Lists;
 import org.junit.Test;
 
 import java.util.Arrays;

@@ -20,7 +20,7 @@ package it.unibz.inf.ontop.protege.utils;
  * #L%
  */
 
-import com.google.common.collect.Iterables;
+import it.unibz.inf.ontop.com.google.common.collect.Iterables;
 
 import java.awt.*;
 import java.util.ArrayList;

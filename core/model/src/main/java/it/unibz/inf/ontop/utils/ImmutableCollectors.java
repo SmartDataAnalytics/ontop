@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.utils;
 
-import com.google.common.collect.*;
+import it.unibz.inf.ontop.com.google.common.collect.*;
 
 import java.util.*;
 import java.util.function.*;

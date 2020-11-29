@@ -1,7 +1,7 @@
 package it.unibz.inf.ontop.test.sparql;
 
-import com.google.common.collect.ImmutableSet;
-import com.google.common.collect.Lists;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableSet;
+import it.unibz.inf.ontop.com.google.common.collect.Lists;
 import junit.framework.TestResult;
 import junit.framework.TestSuite;
 import org.eclipse.rdf4j.OpenRDFUtil;
