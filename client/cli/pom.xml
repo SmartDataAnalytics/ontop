@@ -3,7 +3,7 @@
     <parent>
         <artifactId>ontop-client</artifactId>
         <groupId>it.unibz.inf.ontop</groupId>
-        <version>4.0.3-owlapi5.17-guava-shaded</version>
+        <version>4.1.0-beta-1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -46,17 +46,6 @@
             <groupId>com.github.rvesse</groupId>
             <artifactId>airline-help-bash</artifactId>
             <scope>compile</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>

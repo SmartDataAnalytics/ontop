@@ -24,7 +24,7 @@ import static org.junit.Assert.*;
  */
 public class SelectQueryParserTest {
 
-    private DatabaseRelationDefinition TABLE_P, TABLE_Q, TABLE_R, TABLE_SP, TABLE_SQ;
+    private NamedRelationDefinition TABLE_P, TABLE_Q, TABLE_R, TABLE_SP, TABLE_SQ;
     private DBTermType integerDBType;
     private QuotedIDFactory idfac;
 
@@ -60,14 +60,14 @@ public class SelectQueryParserTest {
 
         idfac = builder.getQuotedIDFactory();
         TABLE_SP = builder.createDatabaseRelation(
-                ImmutableList.of(idfac.createRelationID(null, "PP"),
+                ImmutableList.of(idfac.createRelationID("PP"),
                         idfac.createRelationID("S", "PP")),
                 DatabaseTableDefinition.attributeListBuilder()
         .addAttribute(idfac.createAttributeID("A"), integerDBType, false)
         .addAttribute(idfac.createAttributeID("B"), integerDBType, false));
 
         TABLE_SQ = builder.createDatabaseRelation(
-                ImmutableList.of(idfac.createRelationID(null, "QQ"),
+                ImmutableList.of(idfac.createRelationID("QQ"),
                         idfac.createRelationID("S", "QQ")),
                 DatabaseTableDefinition.attributeListBuilder()
                         .addAttribute(idfac.createAttributeID("A"), integerDBType, false)

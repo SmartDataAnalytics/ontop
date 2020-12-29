@@ -20,7 +20,7 @@ package it.unibz.inf.ontop.si.dag;
  * #L%
  */
 
-import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableList;
 import it.unibz.inf.ontop.spec.ontology.*;
 import it.unibz.inf.ontop.spec.ontology.impl.ClassifiedTBoxImpl;
 
@@ -34,7 +34,7 @@ import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.graph.EdgeReversedGraph;
 import org.jgrapht.traverse.BreadthFirstIterator;
 
-import it.unibz.inf.ontop.com.google.common.collect.ImmutableSet;
+import com.google.common.collect.ImmutableSet;
 
 /**
  * Reasoning over the TBox using the ontology graph

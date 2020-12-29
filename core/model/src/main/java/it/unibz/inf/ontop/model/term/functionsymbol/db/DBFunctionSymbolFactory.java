@@ -1,13 +1,11 @@
 package it.unibz.inf.ontop.model.term.functionsymbol.db;
 
-import it.unibz.inf.ontop.com.google.common.collect.ImmutableMap;
-import it.unibz.inf.ontop.model.term.ImmutableTerm;
-import it.unibz.inf.ontop.model.term.NonNullConstant;
-import it.unibz.inf.ontop.model.term.functionsymbol.BooleanFunctionSymbol;
-import it.unibz.inf.ontop.model.term.functionsymbol.FunctionSymbol;
+import com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.model.template.TemplateComponent;
 import it.unibz.inf.ontop.model.term.functionsymbol.InequalityLabel;
 import it.unibz.inf.ontop.model.type.DBTermType;
 import it.unibz.inf.ontop.model.type.RDFTermType;
+import org.apache.commons.rdf.api.IRI;
 
 import java.util.UUID;
 
@@ -22,12 +20,12 @@ public interface DBFunctionSymbolFactory {
     /**
      * NB: a functional term using this symbol is producing a NULL or a DB string
      */
-    IRIStringTemplateFunctionSymbol getIRIStringTemplateFunctionSymbol(String iriTemplate);
+    IRIStringTemplateFunctionSymbol getIRIStringTemplateFunctionSymbol(ImmutableList<TemplateComponent> iriTemplate);
 
     /**
      * NB: a functional term using this symbol is producing a NULL or a DB string
      */
-    BnodeStringTemplateFunctionSymbol getBnodeStringTemplateFunctionSymbol(String bnodeTemplate);
+    BnodeStringTemplateFunctionSymbol getBnodeStringTemplateFunctionSymbol(ImmutableList<TemplateComponent> bnodeTemplate);
 
     /**
      * Returns a fresh Bnode template
@@ -114,6 +112,8 @@ public interface DBFunctionSymbolFactory {
     DBFunctionSymbol getDBCharLength();
 
     DBFunctionSymbol getR2RMLIRISafeEncode();
+
+    DBFunctionSymbol getDBEncodeForURI();
 
     /**
      * arity must be {@code >= 2 }
@@ -238,6 +238,18 @@ public interface DBFunctionSymbolFactory {
      *
      */
     DBFunctionSymbol getTypedNullFunctionSymbol(DBTermType termType);
+
+    /**
+     * Returns a DB string that unique to the row
+     */
+    DBFunctionSymbol getDBRowUniqueStr();
+
+    /**
+     * Returns a different number for each row (e.g. ROWNUM of Oracle)
+     */
+    DBFunctionSymbol getDBRowNumber();
+
+    DBFunctionSymbol getDBIriStringResolver(IRI baseIRI);
 
     //-------------
     // Aggregation

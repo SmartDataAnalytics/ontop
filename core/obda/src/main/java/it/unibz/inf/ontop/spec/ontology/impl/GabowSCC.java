@@ -21,7 +21,7 @@ package it.unibz.inf.ontop.spec.ontology.impl;
  */
 
 
-import it.unibz.inf.ontop.com.google.common.collect.ImmutableSet;
+import com.google.common.collect.ImmutableSet;
 import it.unibz.inf.ontop.spec.ontology.Equivalences;
 import org.jgrapht.graph.DefaultDirectedGraph;
 

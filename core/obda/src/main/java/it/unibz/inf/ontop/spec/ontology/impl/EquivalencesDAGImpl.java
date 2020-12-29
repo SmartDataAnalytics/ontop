@@ -254,7 +254,7 @@ public class EquivalencesDAGImpl<T> implements EquivalencesDAG<T> {
 		// compute the transitively reduced DAG
 		
 		SimpleDirectedGraph<Equivalences<TT>,DefaultEdge> dag = new SimpleDirectedGraph<>(DefaultEdge.class);
-		for (Equivalences<TT> equivalenceSet : equivalenceSets)  
+		for (Equivalences<TT> equivalenceSet : equivalenceSets)
 			dag.addVertex(equivalenceSet);
 		
 		for (Map.Entry<Equivalences<TT>, Set<Equivalences<TT>>> edges : outgoingEdges.entrySet()) {
