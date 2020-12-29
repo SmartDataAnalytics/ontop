@@ -58,21 +58,15 @@ public interface ForeignKeyConstraint {
      * @return
      */
 
-    static Builder builder(String name, DatabaseRelationDefinition relation, DatabaseRelationDefinition referencedRelation) {
+    static Builder builder(String name, NamedRelationDefinition relation, NamedRelationDefinition referencedRelation) {
         return ForeignKeyConstraintImpl.builder(name, relation, referencedRelation);
     }
 
     /**
      * creates a single-attribute foreign key
-     *
-     * @param name
-     * @param attribute
-     * @param referencedAttribute
-     * @return
      */
-
     static void of(String name, Attribute attribute, Attribute referencedAttribute) {
-        builder(name, (DatabaseRelationDefinition)attribute.getRelation(), (DatabaseRelationDefinition)referencedAttribute.getRelation())
+        builder(name, (NamedRelationDefinition)attribute.getRelation(), (NamedRelationDefinition)referencedAttribute.getRelation())
                 .add(attribute.getIndex(), referencedAttribute.getIndex()).build();
     }
 
@@ -100,7 +94,7 @@ public interface ForeignKeyConstraint {
      * @return referenced relation
      */
 
-    DatabaseRelationDefinition getReferencedRelation();
+    NamedRelationDefinition getReferencedRelation();
 
     /**
      * returns the relation with the foreign key
@@ -108,7 +102,7 @@ public interface ForeignKeyConstraint {
      * @return relation
      */
 
-    DatabaseRelationDefinition getRelation();
+    NamedRelationDefinition getRelation();
 
 }
 

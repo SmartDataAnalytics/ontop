@@ -11,22 +11,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>eu.optique-project</groupId>
-            <artifactId>r2rml-api-jena-binding</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-rdf-jena</artifactId>
-            <version>${commons-rdf.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.jena</groupId>
-            <artifactId>jena-core</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>ontop-owlapi</artifactId>
             <version>${project.version}</version>
@@ -63,21 +47,9 @@
             <artifactId>airline-help-bash</artifactId>
             <scope>compile</scope>
         </dependency>
-
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <scope>test</scope>
-        </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <version>1.4.196</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

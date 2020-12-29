@@ -1,6 +1,8 @@
 package it.unibz.inf.ontop.injection;
 
 
+import com.google.common.collect.ImmutableSet;
+
 public interface OntopReformulationSettings extends OntopOBDASettings, OntopOptimizationSettings {
 
     boolean isExistentialReasoningEnabled();
@@ -8,10 +10,15 @@ public interface OntopReformulationSettings extends OntopOBDASettings, OntopOpti
     boolean isDistinctPostProcessingEnabled();
 
     boolean isQueryLoggingEnabled();
+    boolean isQueryTemplateExtractionEnabled();
     boolean isSparqlQueryIncludedIntoQueryLog();
     boolean isReformulatedQueryIncludedIntoQueryLog();
     boolean areClassesAndPropertiesIncludedIntoQueryLog();
     boolean areTablesIncludedIntoQueryLog();
+    boolean isQueryLoggingDecompositionEnabled();
+    boolean areQueryLoggingDecompositionAndMergingMutuallyExclusive();
+
+    ImmutableSet<String> getHttpHeaderNamesToLog();
 
     long getQueryCacheMaxSize();
 
@@ -36,5 +43,8 @@ public interface OntopReformulationSettings extends OntopOBDASettings, OntopOpti
     String CLASSES_INCLUDED_QUERY_LOGGING = "ontop.queryLogging.includeClassesAndProperties";
     // Includes DB tables/views into the query log
     String TABLES_INCLUDED_QUERY_LOGGING = "ontop.queryLogging.includeTables";
-
+    String HTTP_HEADER_INCLUDED_QUERY_LOGGING_PREFIX = "ontop.queryLogging.includeHttpHeader.";
+    String QUERY_TEMPLATE_EXTRACTION = "ontop.queryLogging.extractQueryTemplate";
+    String QUERY_LOGGING_DECOMPOSITION = "ontop.queryLogging.decomposition";
+    String QUERY_LOGGING_DECOMPOSITION_AND_MERGING_EXCLUSIVE = "ontop.queryLogging.decompositionAndMergingMutuallyExclusive";
 }

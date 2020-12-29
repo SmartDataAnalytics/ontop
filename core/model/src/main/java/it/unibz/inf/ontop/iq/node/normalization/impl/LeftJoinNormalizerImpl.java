@@ -72,6 +72,11 @@ public class LeftJoinNormalizerImpl implements LeftJoinNormalizer {
         if (state.isEmpty())
             return state.createNormalizedTree(currentIQProperties);
 
+        // Particularly needed when the LJ condition has never been propagated down
+        // and no substitution on both side will give an opportunity.
+        // TODO: see if it deserves to be in the loop.
+        state = state.propagateDownLJCondition();
+
         for (int i = 0; i < MAX_ITERATIONS; i++) {
             LJNormalizationState newState = state
                     .optimizeLeftJoinCondition()
@@ -216,7 +221,7 @@ public class LeftJoinNormalizerImpl implements LeftJoinNormalizer {
 
         private LJNormalizationState liftLeftDistinct(UnaryIQTree liftedLeftChild) {
             DistinctNode distinctNode = (DistinctNode) liftedLeftChild.getRootNode();
-            if (rightChild.isDistinct()) {
+            if (isLJDistinctWhileLeftIsDistinct(liftedLeftChild)) {
                 IQTree newRightChild = rightChild.removeDistincts();
                 IQTree newLeftChild = liftedLeftChild.getChild();
                 return updateParentConditionChildren(distinctNode, ljCondition, newLeftChild, newRightChild)
@@ -226,6 +231,20 @@ public class LeftJoinNormalizerImpl implements LeftJoinNormalizer {
             else
                 // Stops the liftLeftChild() recursion
                 return updateLeftChild(liftedLeftChild);
+        }
+
+        /**
+         * When the left is distinct, isDistinct() behaves like for inner joins
+         */
+        private boolean isLJDistinctWhileLeftIsDistinct(IQTree distinctLeftChild) {
+            if (rightChild.isDistinct())
+                return true;
+
+            IQTree innerJoinTree = iqFactory.createNaryIQTree(
+                    iqFactory.createInnerJoinNode(ljCondition),
+                    ImmutableList.of(distinctLeftChild, rightChild));
+
+            return innerJoinTree.isDistinct();
         }
 
         private Optional<LJNormalizationState> tryToLiftRightDistinct(UnaryIQTree liftedRightChild) {
@@ -778,6 +797,17 @@ public class LeftJoinNormalizerImpl implements LeftJoinNormalizer {
                     .filter(e -> (e.getValue().equals(specialProvenanceConstant)))
                     .map(e -> Maps.immutableEntry(e.getKey(), specialProvenanceConstant))
                     .findFirst();
+        }
+
+        public LJNormalizationState propagateDownLJCondition() {
+            if (ljCondition.isPresent()) {
+                IQTree newRightChild = rightChild.propagateDownConstraint(ljCondition.get());
+                return rightChild.equals(newRightChild)
+                        ? this
+                        : updateConditionAndRightChild(ljCondition, newRightChild);
+            }
+            else
+                return this;
         }
     }
 }
