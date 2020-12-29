@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.owlapi;
 
-import com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
 import org.junit.*;
 
 public class MultipleSchemasH2Test extends AbstractOWLAPITest {

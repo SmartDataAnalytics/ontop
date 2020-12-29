@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.rdf4j.predefined.parsing;
 
-import com.google.common.collect.ImmutableMap;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMap;
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.query.Query;
 

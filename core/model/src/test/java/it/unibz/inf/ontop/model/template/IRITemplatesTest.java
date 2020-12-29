@@ -20,7 +20,7 @@ package it.unibz.inf.ontop.model.template;
  * #L%
  */
 
-import com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
 import it.unibz.inf.ontop.model.template.impl.IRITemplateFactory;
 import it.unibz.inf.ontop.model.template.impl.ObjectTemplateFactory;
 import it.unibz.inf.ontop.model.term.ImmutableFunctionalTerm;

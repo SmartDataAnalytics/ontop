@@ -1,7 +1,7 @@
 package it.unibz.inf.ontop.endpoint.controllers;
 
-import com.google.common.collect.ImmutableMultimap;
-import com.google.common.collect.Maps;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMultimap;
+import it.unibz.inf.ontop.com.google.common.collect.Maps;
 import it.unibz.inf.ontop.rdf4j.repository.impl.OntopRepositoryConnection;
 import it.unibz.inf.ontop.rdf4j.repository.impl.OntopVirtualRepository;
 import it.unibz.inf.ontop.utils.ImmutableCollectors;

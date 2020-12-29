@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.owlapi.sql;
 
-import com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
 import it.unibz.inf.ontop.owlapi.AbstractOWLAPITest;
 import org.junit.*;
 

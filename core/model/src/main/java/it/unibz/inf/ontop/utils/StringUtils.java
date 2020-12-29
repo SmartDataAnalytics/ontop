@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.utils;
 
-import com.google.common.collect.ImmutableMap;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMap;
 
 import java.util.function.Consumer;
 

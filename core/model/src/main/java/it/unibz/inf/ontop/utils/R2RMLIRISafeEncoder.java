@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.utils;
 
-import com.google.common.collect.ImmutableBiMap;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableBiMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

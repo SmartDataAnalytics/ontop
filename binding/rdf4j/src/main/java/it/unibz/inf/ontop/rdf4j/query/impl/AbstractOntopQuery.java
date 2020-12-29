@@ -19,7 +19,7 @@
  */
 package it.unibz.inf.ontop.rdf4j.query.impl;
 
-import com.google.common.collect.ImmutableMultimap;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMultimap;
 import it.unibz.inf.ontop.answering.connection.OntopConnection;
 import it.unibz.inf.ontop.injection.OntopSystemSettings;
 import org.eclipse.rdf4j.model.Value;

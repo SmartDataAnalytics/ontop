@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.docker.dremio;
 
-import com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
 import com.google.inject.Guice;
 import it.unibz.inf.ontop.docker.AbstractLeftJoinProfTest;
 import it.unibz.inf.ontop.owlapi.OntopOWLReasoner;

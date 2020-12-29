@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.iq.view.impl;
 
-import com.google.common.collect.ImmutableMap;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMap;
 import com.google.inject.Inject;
 import it.unibz.inf.ontop.iq.view.OntopViewUnfolder;
 import it.unibz.inf.ontop.dbschema.OntopViewDefinition;

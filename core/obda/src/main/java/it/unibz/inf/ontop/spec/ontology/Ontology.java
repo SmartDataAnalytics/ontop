@@ -1,7 +1,7 @@
 package it.unibz.inf.ontop.spec.ontology;
 
 
-import com.google.common.collect.ImmutableSet;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableSet;
 
 public interface Ontology  {
 

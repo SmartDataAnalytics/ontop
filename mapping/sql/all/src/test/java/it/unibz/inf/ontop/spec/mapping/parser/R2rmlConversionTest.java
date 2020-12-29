@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.spec.mapping.parser;
 
-import com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
 import eu.optique.r2rml.api.binding.rdf4j.RDF4JR2RMLMappingManager;
 import eu.optique.r2rml.api.model.ObjectMap;
 import eu.optique.r2rml.api.model.TriplesMap;

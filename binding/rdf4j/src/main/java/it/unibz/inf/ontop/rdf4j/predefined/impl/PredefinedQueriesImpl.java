@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.rdf4j.predefined.impl;
 
-import com.google.common.collect.ImmutableMap;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMap;
 import it.unibz.inf.ontop.rdf4j.predefined.PredefinedGraphQuery;
 import it.unibz.inf.ontop.rdf4j.predefined.PredefinedQueries;
 import it.unibz.inf.ontop.rdf4j.predefined.PredefinedTupleQuery;

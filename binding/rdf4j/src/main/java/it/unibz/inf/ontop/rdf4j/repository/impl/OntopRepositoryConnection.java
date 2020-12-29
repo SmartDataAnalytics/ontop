@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.rdf4j.repository.impl;
 
-import com.google.common.collect.ImmutableMultimap;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMultimap;
 import it.unibz.inf.ontop.answering.connection.OntopConnection;
 import it.unibz.inf.ontop.answering.reformulation.input.RDF4JInputQueryFactory;
 import it.unibz.inf.ontop.answering.reformulation.input.SPARQLQuery;

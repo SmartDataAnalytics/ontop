@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.injection.impl;
 
-import com.google.common.collect.ImmutableSet;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableSet;
 import it.unibz.inf.ontop.injection.OntopStandaloneSQLSettings;
 import it.unibz.inf.ontop.injection.OntopSystemSQLSettings;
 

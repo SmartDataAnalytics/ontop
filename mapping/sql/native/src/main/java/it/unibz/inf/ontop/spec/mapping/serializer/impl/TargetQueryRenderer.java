@@ -1,7 +1,7 @@
 package it.unibz.inf.ontop.spec.mapping.serializer.impl;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.Maps;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.Maps;
 import it.unibz.inf.ontop.exception.MinorOntopInternalBugException;
 import it.unibz.inf.ontop.model.atom.QuadPredicate;
 import it.unibz.inf.ontop.model.atom.RDFAtomPredicate;

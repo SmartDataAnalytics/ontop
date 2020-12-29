@@ -21,8 +21,8 @@ package it.unibz.inf.ontop.spec.mapping.impl;
  */
 
 import com.github.jsonldjava.shaded.com.google.common.collect.Streams;
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMap;
 import com.google.inject.Inject;
 import com.google.inject.assistedinject.Assisted;
 import it.unibz.inf.ontop.model.vocabulary.*;

@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.rdf4j.predefined;
 
-import com.google.common.collect.ImmutableMap;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMap;
 import it.unibz.inf.ontop.rdf4j.predefined.impl.PredefinedQueriesImpl;
 
 public interface PredefinedQueries {

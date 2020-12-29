@@ -1,8 +1,8 @@
 package it.unibz.inf.ontop.spec.mapping.serializer.impl;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Maps;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableList;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMap;
+import it.unibz.inf.ontop.com.google.common.collect.Maps;
 import eu.optique.r2rml.api.MappingFactory;
 import eu.optique.r2rml.api.model.*;
 import it.unibz.inf.ontop.exception.MinorOntopInternalBugException;

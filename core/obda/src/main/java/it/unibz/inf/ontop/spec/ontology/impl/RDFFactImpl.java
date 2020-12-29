@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.spec.ontology.impl;
 
-import com.google.common.base.Objects;
+import it.unibz.inf.ontop.com.google.common.base.Objects;
 import it.unibz.inf.ontop.model.term.IRIConstant;
 import it.unibz.inf.ontop.model.term.ObjectConstant;
 import it.unibz.inf.ontop.model.term.RDFConstant;

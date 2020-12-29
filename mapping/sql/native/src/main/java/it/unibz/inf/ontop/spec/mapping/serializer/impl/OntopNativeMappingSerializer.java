@@ -1,6 +1,6 @@
 package it.unibz.inf.ontop.spec.mapping.serializer.impl;
 
-import com.google.common.collect.ImmutableMap;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMap;
 import it.unibz.inf.ontop.spec.mapping.PrefixManager;
 import it.unibz.inf.ontop.spec.mapping.parser.impl.OntopNativeMappingParser;
 import it.unibz.inf.ontop.spec.mapping.pp.SQLPPMapping;
