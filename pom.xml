@@ -3,7 +3,7 @@
     <groupId>it.unibz.inf.ontop</groupId>
     <artifactId>ontop</artifactId>
     <packaging>pom</packaging>
-    <version>4.0.3-owlapi5-guava-shaded</version>
+    <version>4.0.3-owlapi5.17-guava-shaded</version>
 
     <name>ontop</name>
     <url>http://ontop-vkg.org/</url>
