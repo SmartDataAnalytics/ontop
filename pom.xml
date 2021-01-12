@@ -278,9 +278,9 @@
                         </goals>
                         <configuration>
                             <rules>
-                                <requireMavenVersion>
-                                    <version>3.6.0</version>
-                                </requireMavenVersion>
+<!--?                                <requireMavenVersion>-->
+<!--?                                    <version>3.6.0</version>-->
+<!--?                                </requireMavenVersion>-->
 <!--?                                <dependencyConvergence />-->
                             </rules>
                         </configuration>
