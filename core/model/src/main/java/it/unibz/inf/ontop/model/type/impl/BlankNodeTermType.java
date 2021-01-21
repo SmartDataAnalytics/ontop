@@ -9,7 +9,7 @@ import it.unibz.inf.ontop.model.type.TermTypeAncestry;
 public class BlankNodeTermType extends RDFTermTypeImpl implements ObjectRDFType {
 
     protected BlankNodeTermType(TermTypeAncestry parentAncestry) {
-        super("BNODE", parentAncestry, DBTypeFactory::getDBStringType);
+        super("BNODE", parentAncestry, (DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBStringType());
     }
 
     @Override

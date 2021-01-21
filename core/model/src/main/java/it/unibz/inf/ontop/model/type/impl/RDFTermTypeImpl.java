@@ -5,6 +5,7 @@ import it.unibz.inf.ontop.model.type.DBTypeFactory;
 import it.unibz.inf.ontop.model.type.RDFTermType;
 import it.unibz.inf.ontop.model.type.TermTypeAncestry;
 
+import java.io.Serializable;
 import java.util.function.Function;
 
 public class RDFTermTypeImpl extends TermTypeImpl implements RDFTermType {
@@ -17,14 +18,18 @@ public class RDFTermTypeImpl extends TermTypeImpl implements RDFTermType {
     protected RDFTermTypeImpl(String name, TermTypeAncestry parentAncestry,
                               Function<DBTypeFactory, DBTermType> closestDBTypeFct) {
         super(name, parentAncestry, false);
-        this.closestDBTypeSupplier = closestDBTypeFct;
+        this.closestDBTypeSupplier = (Function<DBTypeFactory, DBTermType> & Serializable) (t) -> closestDBTypeFct.apply(t);
+//        this.closestDBTypeSupplier = closestDBTypeFct;
     }
 
     protected RDFTermTypeImpl(String name, TermTypeAncestry parentAncestry) {
         super(name, parentAncestry, true);
-        this.closestDBTypeSupplier = (dbTypeFactory) -> {
+        this.closestDBTypeSupplier = (Function<DBTypeFactory, DBTermType> & Serializable) (dbTypeFactory) -> {
             throw new UnsupportedOperationException("This RDF term type is abstract");
         };
+//        this.closestDBTypeSupplier = (dbTypeFactory) -> {
+//            throw new UnsupportedOperationException("This RDF term type is abstract");
+//        };
     }
 
     /**

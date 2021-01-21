@@ -23,6 +23,7 @@ import org.eclipse.rdf4j.rio.helpers.StatementCollector;
 import java.io.*;
 import java.net.URL;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * High-level class that implements the MappingParser interface for R2RML.
@@ -87,6 +88,11 @@ public class R2RMLMappingParser implements SQLMappingParser {
     public SQLPPMapping parse(Graph mappingGraph) throws InvalidMappingException {
         try {
             Collection<TriplesMap> tripleMaps = manager.importMappings(mappingGraph);
+
+            // sort here for determinism
+            tripleMaps = tripleMaps.stream().sorted(Comparator.comparing(Object::toString)).collect(Collectors.toList());
+//            System.out.println("Parsed R2RML Mappings (sorted):");
+//            tripleMaps.forEach(System.out::println);
 
             ImmutableList<SQLPPTriplesMap> sourceMappings = transformer.convert(tripleMaps);
 

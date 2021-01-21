@@ -3,7 +3,9 @@ package it.unibz.inf.ontop.model.type.lexical;
 import it.unibz.inf.ontop.model.type.DBTermType;
 import org.eclipse.rdf4j.model.datatypes.XMLDatatypeUtil;
 
+import java.io.Serializable;
 import java.util.Optional;
+import java.util.function.Function;
 
 public class DefaultLexicalSpaces {
 
