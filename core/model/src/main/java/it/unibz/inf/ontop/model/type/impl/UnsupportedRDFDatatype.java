@@ -10,11 +10,11 @@ import org.apache.commons.rdf.api.IRI;
 public class UnsupportedRDFDatatype extends SimpleRDFDatatype {
 
     private UnsupportedRDFDatatype(TermTypeAncestry parentAncestry) {
-        super(OntopInternal.UNSUPPORTED, parentAncestry, (DBTypeFactorySerializable) DBTypeFactory::getDBStringType);
+        super(OntopInternal.UNSUPPORTED, parentAncestry, (SerializableDBTypeFactory) DBTypeFactory::getDBStringType);
     }
 
     private UnsupportedRDFDatatype(TermTypeAncestry parentAncestry, IRI concreteIRI) {
-        super(concreteIRI, parentAncestry, (DBTypeFactorySerializable) DBTypeFactory::getDBStringType);
+        super(concreteIRI, parentAncestry, (SerializableDBTypeFactory) DBTypeFactory::getDBStringType);
     }
 
     static RDFDatatype createUnsupportedDatatype(TermTypeAncestry parentAncestry, IRI concreteIRI) {

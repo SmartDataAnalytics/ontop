@@ -67,14 +67,14 @@ public class TypeFactoryImpl implements TypeFactory {
 
 		xsdDoubleDatatype = createTopConcreteNumericTermType(XSD.DOUBLE, numericDatatype,
 				// TODO: check
-				(DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBDoubleType());
+				(SerializableDBTypeFactory) (dbTypeFactory) -> dbTypeFactory.getDBDoubleType());
 		registerDatatype(xsdDoubleDatatype);
 
 		// Type promotion: an xsd:float can be promoted into a xsd:double
 		xsdFloatDatatype = createConcreteNumericTermType(XSD.FLOAT, numericDatatype.getAncestry(),
 				xsdDoubleDatatype.getPromotionSubstitutionHierarchy(),true,
 				// TODO: is there a better type?
-				(DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBDoubleType());
+				(SerializableDBTypeFactory) (dbTypeFactory) -> dbTypeFactory.getDBDoubleType());
 		registerDatatype(xsdFloatDatatype);
 
 		owlRealDatatype = createAbstractNumericTermType(OWL.REAL, numericDatatype.getAncestry());
@@ -83,110 +83,110 @@ public class TypeFactoryImpl implements TypeFactory {
 		owlRationalDatatype = createConcreteNumericTermType(OWL.RATIONAL, owlRealDatatype.getAncestry(),
 				xsdFloatDatatype.getPromotionSubstitutionHierarchy(), true,
 				// TODO: is there a better type?
-				(DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBDecimalType());
+				(SerializableDBTypeFactory) (dbTypeFactory) -> dbTypeFactory.getDBDecimalType());
 		registerDatatype(owlRationalDatatype);
 		xsdDecimalDatatype = createConcreteNumericTermType(XSD.DECIMAL, owlRationalDatatype, true,
 				// TODO: is there a better type?
-				(DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBDecimalType());
+				(SerializableDBTypeFactory) (dbTypeFactory) -> dbTypeFactory.getDBDecimalType());
 		registerDatatype(xsdDecimalDatatype);
 		xsdIntegerDatatype = createConcreteNumericTermType(XSD.INTEGER, xsdDecimalDatatype, true,
 				// TODO: check
-				(DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBLargeIntegerType());
+				(SerializableDBTypeFactory) (dbTypeFactory) -> dbTypeFactory.getDBLargeIntegerType());
 		registerDatatype(xsdIntegerDatatype);
 
 		xsdNonPositiveIntegerDatatype = createConcreteNumericTermType(XSD.NON_POSITIVE_INTEGER,
 				xsdIntegerDatatype, false,
 				// TODO: is there a better type?
-				(DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBLargeIntegerType());
+				(SerializableDBTypeFactory) (dbTypeFactory) -> dbTypeFactory.getDBLargeIntegerType());
 		registerDatatype(xsdNonPositiveIntegerDatatype);
 		xsdNegativeIntegerDatatype = createConcreteNumericTermType(XSD.NEGATIVE_INTEGER,
 				xsdNonPositiveIntegerDatatype, false,
 				// TODO: is there a better type?
-				(DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBLargeIntegerType());
+				(SerializableDBTypeFactory) (dbTypeFactory) -> dbTypeFactory.getDBLargeIntegerType());
 		registerDatatype(xsdNegativeIntegerDatatype);
 
 		xsdLongDatatype = createConcreteNumericTermType(XSD.LONG, xsdIntegerDatatype,false,
 				// TODO: is there a better type?
-				(DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBLargeIntegerType());
+				(SerializableDBTypeFactory) (dbTypeFactory) -> dbTypeFactory.getDBLargeIntegerType());
 		registerDatatype(xsdLongDatatype);
 		xsdIntDatatype = createConcreteNumericTermType(XSD.INT, xsdLongDatatype,false,
 				// TODO: is there a better type?
-				(DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBLargeIntegerType());
+				(SerializableDBTypeFactory) (dbTypeFactory) -> dbTypeFactory.getDBLargeIntegerType());
 		registerDatatype(xsdIntDatatype);
 		xsdShortDatatype = createConcreteNumericTermType(XSD.SHORT, xsdIntDatatype, false,
 				// TODO: is there a better type?
-				(DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBLargeIntegerType());
+				(SerializableDBTypeFactory) (dbTypeFactory) -> dbTypeFactory.getDBLargeIntegerType());
 		registerDatatype(xsdShortDatatype);
 		xsdByteDatatype = createConcreteNumericTermType(XSD.BYTE, xsdShortDatatype, false,
 				// TODO: is there a better type?
-				(DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBLargeIntegerType());
+				(SerializableDBTypeFactory) (dbTypeFactory) -> dbTypeFactory.getDBLargeIntegerType());
 		registerDatatype(xsdByteDatatype);
 
 		xsdNonNegativeIntegerDatatype = createConcreteNumericTermType(XSD.NON_NEGATIVE_INTEGER,
 				xsdIntegerDatatype,false,
 				// TODO: is there a better type?
-				(DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBLargeIntegerType());
+				(SerializableDBTypeFactory) (dbTypeFactory) -> dbTypeFactory.getDBLargeIntegerType());
 		registerDatatype(xsdNonNegativeIntegerDatatype);
 
 		xsdUnsignedLongDatatype = createConcreteNumericTermType(XSD.UNSIGNED_LONG, xsdIntegerDatatype, false,
 				// TODO: is there a better type?
-				(DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBLargeIntegerType());
+				(SerializableDBTypeFactory) (dbTypeFactory) -> dbTypeFactory.getDBLargeIntegerType());
 		registerDatatype(xsdUnsignedLongDatatype);
 		xsdUnsignedIntDatatype = createConcreteNumericTermType(XSD.UNSIGNED_INT, xsdUnsignedLongDatatype,false,
 				// TODO: is there a better type?
-				(DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBLargeIntegerType());
+				(SerializableDBTypeFactory) (dbTypeFactory) -> dbTypeFactory.getDBLargeIntegerType());
 		registerDatatype(xsdUnsignedIntDatatype);
 
 		xsdUnsignedShortDatatype = createConcreteNumericTermType(XSD.UNSIGNED_SHORT, xsdUnsignedIntDatatype, false,
 				// TODO: is there a better type?
-				(DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBLargeIntegerType());
+				(SerializableDBTypeFactory) (dbTypeFactory) -> dbTypeFactory.getDBLargeIntegerType());
 		registerDatatype(xsdUnsignedShortDatatype);
 		xsdUnsignedByteDatatype = createConcreteNumericTermType(XSD.UNSIGNED_BYTE, xsdUnsignedShortDatatype, false,
 				// TODO: is there a better type?
-				(DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBLargeIntegerType());
+				(SerializableDBTypeFactory) (dbTypeFactory) -> dbTypeFactory.getDBLargeIntegerType());
 		registerDatatype(xsdUnsignedByteDatatype);
 
 		xsdPositiveIntegerDatatype = createConcreteNumericTermType(XSD.POSITIVE_INTEGER,
 				xsdNonNegativeIntegerDatatype,false,
 				// TODO: is there a better type?
-				(DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBLargeIntegerType());
+				(SerializableDBTypeFactory) (dbTypeFactory) -> dbTypeFactory.getDBLargeIntegerType());
 		registerDatatype(xsdPositiveIntegerDatatype);
 
 		xsdBooleanDatatype = createSimpleConcreteRDFDatatype(XSD.BOOLEAN, rdfsLiteralDatatype.getAncestry(),
-				(DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBBooleanType());
+				(SerializableDBTypeFactory) (dbTypeFactory) -> dbTypeFactory.getDBBooleanType());
 		registerDatatype(xsdBooleanDatatype);
 
 		xsdStringDatatype = createSimpleConcreteRDFDatatype(XSD.STRING, rdfsLiteralDatatype.getAncestry(),
-				(DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBStringType());
+				(SerializableDBTypeFactory) (dbTypeFactory) -> dbTypeFactory.getDBStringType());
 		registerDatatype(xsdStringDatatype);
 
 		defaultUnsupportedDatatype = UnsupportedRDFDatatype.createUnsupportedDatatype(rdfsLiteralDatatype.getAncestry());
 
 		xsdTimeDatatype = createSimpleConcreteRDFDatatype(XSD.TIME, rdfsLiteralDatatype.getAncestry(),
-				(DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBTimeType());
+				(SerializableDBTypeFactory) (dbTypeFactory) -> dbTypeFactory.getDBTimeType());
 		registerDatatype(xsdTimeDatatype);
 
 		dateOrDatetimeDatatype = createSimpleAbstractRDFDatatype(OntopInternal.DATE_OR_DATETIME, rdfsLiteralDatatype.getAncestry());
 		registerDatatype(dateOrDatetimeDatatype);
 
 		xsdDateDatatype = createSimpleConcreteRDFDatatype(XSD.DATE, dateOrDatetimeDatatype.getAncestry(),
-				(DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBDateType());
+				(SerializableDBTypeFactory) (dbTypeFactory) -> dbTypeFactory.getDBDateType());
 		registerDatatype(xsdDateDatatype);
 		xsdDatetimeDatatype = createSimpleConcreteRDFDatatype(XSD.DATETIME, dateOrDatetimeDatatype.getAncestry(),
 				// TODO: check
-				(DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBDateTimestampType());
+				(SerializableDBTypeFactory) (dbTypeFactory) -> dbTypeFactory.getDBDateTimestampType());
 		registerDatatype(xsdDatetimeDatatype);
 		xsdDatetimeStampDatatype = createSimpleConcreteRDFDatatype(XSD.DATETIMESTAMP, xsdDatetimeDatatype.getAncestry(),
-				(DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBDateTimestampType());
+				(SerializableDBTypeFactory) (dbTypeFactory) -> dbTypeFactory.getDBDateTimestampType());
 		registerDatatype(xsdDatetimeStampDatatype);
 		xsdGYearDatatype = createSimpleConcreteRDFDatatype(XSD.GYEAR, rdfsLiteralDatatype.getAncestry(),
 				// TODO: check
-				(DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBStringType());
+				(SerializableDBTypeFactory) (dbTypeFactory) -> dbTypeFactory.getDBStringType());
 		registerDatatype(xsdGYearDatatype);
 
 		xsdBase64Datatype = createSimpleConcreteRDFDatatype(XSD.BASE64BINARY, rdfsLiteralDatatype.getAncestry(),
 				// TODO: is there a better type
-				(DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBStringType());
+				(SerializableDBTypeFactory) (dbTypeFactory) -> dbTypeFactory.getDBStringType());
 		registerDatatype(xsdBase64Datatype);
 
 		dbTypeFactory = dbTypeFactoryFactory.createDBFactory(rootTermType, this);
@@ -207,7 +207,7 @@ public class TypeFactoryImpl implements TypeFactory {
 		return datatypeCache.computeIfAbsent(
 				iri,
 				// Non-predefined datatypes cannot be declared as the child of a concrete datatype
-				(Function<IRI, RDFDatatype> & Serializable) i -> createSimpleConcreteRDFDatatype(i, rdfsLiteralDatatype.getAncestry(), (DBTypeFactorySerializable) (dbTypeFactory) -> dbTypeFactory.getDBStringType()));
+				(Function<IRI, RDFDatatype> & Serializable) i -> createSimpleConcreteRDFDatatype(i, rdfsLiteralDatatype.getAncestry(), (SerializableDBTypeFactory) (dbTypeFactory) -> dbTypeFactory.getDBStringType()));
 	}
 
 	@Override
