@@ -10,6 +10,8 @@ import it.unibz.inf.ontop.model.term.*;
 import it.unibz.inf.ontop.model.term.functionsymbol.*;
 import it.unibz.inf.ontop.model.term.functionsymbol.db.DBFunctionSymbol;
 import it.unibz.inf.ontop.model.term.functionsymbol.db.DBFunctionSymbolFactory;
+import it.unibz.inf.ontop.model.term.functionsymbol.db.SerializableDBFunctionSymbolFactory;
+import it.unibz.inf.ontop.model.term.functionsymbol.db.SerializableDBFunctionalTermFactory;
 import it.unibz.inf.ontop.model.type.*;
 import it.unibz.inf.ontop.model.vocabulary.SPARQL;
 import it.unibz.inf.ontop.model.vocabulary.XPathFunction;
@@ -135,7 +137,7 @@ public class FunctionSymbolFactoryImpl implements FunctionSymbolFactory {
                 new LcaseSPARQLFunctionSymbolImpl(xsdString),
                 new SimpleUnarySPARQLFunctionSymbolImpl("SP_ENCODE_FOR_URI", XPathFunction.ENCODE_FOR_URI,
                         xsdString, xsdString, true,
-                        TermFactory::getDBEncodeForURI),
+                                                        (SerializableDBFunctionalTermFactory) TermFactory::getDBEncodeForURI),
                 new StartsWithSPARQLFunctionSymbolImpl(xsdString, xsdBoolean),
                 new EndsWithSPARQLFunctionSymbolImpl(xsdString, xsdBoolean),
                 new ContainsSPARQLFunctionSymbolImpl(xsdString, xsdBoolean),
@@ -173,16 +175,16 @@ public class FunctionSymbolFactoryImpl implements FunctionSymbolFactory {
                 new GreaterThanSPARQLFunctionSymbolImpl(abstractRDFType, xsdBoolean, dbBoolean),
                 new SameTermSPARQLFunctionSymbolImpl(abstractRDFType, xsdBoolean),
                 new UnaryNumericSPARQLFunctionSymbolImpl("SP_ABS", XPathFunction.NUMERIC_ABS, abstractNumericType,
-                        this.dbFunctionSymbolFactory::getAbs),
+                                                         (SerializableDBFunctionSymbolFactory) this.dbFunctionSymbolFactory::getAbs),
                 new UnaryNumericSPARQLFunctionSymbolImpl("SP_CEIL", XPathFunction.NUMERIC_CEIL, abstractNumericType,
-                        this.dbFunctionSymbolFactory::getCeil),
+                                                         (SerializableDBFunctionSymbolFactory) this.dbFunctionSymbolFactory::getCeil),
                 new UnaryNumericSPARQLFunctionSymbolImpl("SP_FLOOR", XPathFunction.NUMERIC_FLOOR, abstractNumericType,
-                        this.dbFunctionSymbolFactory::getFloor),
+                                                         (SerializableDBFunctionSymbolFactory) this.dbFunctionSymbolFactory::getFloor),
                 new UnaryNumericSPARQLFunctionSymbolImpl("SP_ROUND", XPathFunction.NUMERIC_ROUND, abstractNumericType,
-                        this.dbFunctionSymbolFactory::getRound),
+                                                         (SerializableDBFunctionSymbolFactory) this.dbFunctionSymbolFactory::getRound),
                 new MultitypedInputUnarySPARQLFunctionSymbolImpl("SP_YEAR", SPARQL.YEAR, dateOrDatetime,
                         xsdInteger, false, dbTypeFactory,
-                        (DBTermType t) ->  {
+                                                                 (SerializableDBFunctionSymbolFactory) (DBTermType t) ->  {
                             if (t.isA(dbTimestamp))
                                 return dbFunctionSymbolFactory.getDBYearFromDatetime();
                             else if (t.isA(dbDate))
@@ -192,7 +194,7 @@ public class FunctionSymbolFactoryImpl implements FunctionSymbolFactory {
                         }),
                 new MultitypedInputUnarySPARQLFunctionSymbolImpl("SP_MONTH", SPARQL.MONTH,
                         dateOrDatetime, xsdInteger, false, dbTypeFactory,
-                        (DBTermType t) ->  {
+                                                                 (SerializableDBFunctionSymbolFactory) (DBTermType t) ->  {
                             if (t.isA(dbTimestamp))
                                 return dbFunctionSymbolFactory.getDBMonthFromDatetime();
                             else if (t.isA(dbDate))
@@ -202,7 +204,7 @@ public class FunctionSymbolFactoryImpl implements FunctionSymbolFactory {
                         }),
                 new MultitypedInputUnarySPARQLFunctionSymbolImpl("SP_DAY", SPARQL.DAY,
                         dateOrDatetime, xsdInteger, false, dbTypeFactory,
-                        (DBTermType t) ->  {
+                                                                 (SerializableDBFunctionSymbolFactory) (DBTermType t) ->  {
                             if (t.isA(dbTimestamp))
                                 return dbFunctionSymbolFactory.getDBDayFromDatetime();
                             else if (t.isA(dbDate))
@@ -211,13 +213,13 @@ public class FunctionSymbolFactoryImpl implements FunctionSymbolFactory {
                                 throw new MinorOntopInternalBugException("Unexpected db term type: " + t);
                         }),
                 new SimpleUnarySPARQLFunctionSymbolImpl("SP_HOURS", XPathFunction.HOURS_FROM_DATETIME,
-                        xsdDatetime, xsdInteger, false, TermFactory::getDBHours),
+                        xsdDatetime, xsdInteger, false, (SerializableDBFunctionalTermFactory) TermFactory::getDBHours),
                 new SimpleUnarySPARQLFunctionSymbolImpl("SP_MINUTES", XPathFunction.MINUTES_FROM_DATETIME,
-                        xsdDatetime, xsdInteger, false, TermFactory::getDBMinutes),
+                        xsdDatetime, xsdInteger, false, (SerializableDBFunctionalTermFactory) TermFactory::getDBMinutes),
                 new SimpleUnarySPARQLFunctionSymbolImpl("SP_SECONDS", XPathFunction.SECONDS_FROM_DATETIME,
-                        xsdDatetime, xsdDecimal, false, TermFactory::getDBSeconds),
+                        xsdDatetime, xsdDecimal, false, (SerializableDBFunctionalTermFactory) TermFactory::getDBSeconds),
                 new SimpleUnarySPARQLFunctionSymbolImpl("SP_TZ", SPARQL.TZ,
-                xsdDatetime, xsdString, false, TermFactory::getDBTz),
+                xsdDatetime, xsdString, false, (SerializableDBFunctionalTermFactory) TermFactory::getDBTz),
                 new UnaryBnodeSPARQLFunctionSymbolImpl(xsdString, bnodeType),
                 new NowSPARQLFunctionSymbolImpl(xsdDatetime),
                 new IfSPARQLFunctionSymbolImpl(xsdBoolean, abstractRDFType),

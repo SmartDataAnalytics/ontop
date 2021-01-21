@@ -24,13 +24,13 @@ public abstract class AbstractSQLDBFunctionSymbolFactory extends AbstractDBFunct
     protected static final String REGEXP_REPLACE_STR = "REGEXP_REPLACE";
     protected static final String REGEXP_LIKE_STR = "REGEXP_LIKE";
     protected static final String AND_STR = "AND";
+    protected static final String RIGHT_STR = "RIGHT";
     protected static final String OR_STR = "OR";
     protected static final String NOT_STR = "NOT";
     protected static final String SUBSTR_STR = "SUBSTR";
     protected static final String SUBSTRING_STR = "SUBSTRING";
     protected static final String CHAR_LENGTH_STR = "CHAR_LENGTH";
     protected static final String LENGTH_STR = "LENGTH";
-    protected static final String RIGHT_STR = "RIGHT";
     protected static final String MULTIPLY_STR = "*";
     protected static final String DIVIDE_STR = "/";
     protected static final String ADD_STR = "+";
@@ -547,7 +547,7 @@ public abstract class AbstractSQLDBFunctionSymbolFactory extends AbstractDBFunct
         return new DefaultSQLTimestampISONormFunctionSymbol(
                 dbDateTimestampType,
                 dbStringType,
-                this::serializeDateTimeNorm);
+                (DBFunctionSymbolSerializer) this::serializeDateTimeNorm);
     }
 
 
