@@ -1,8 +1,8 @@
-package it.unibz.inf.ontop.owlapi.resultset.utils;
+package it.unibz.inf.ontop.querymanager;
 
 /*
  * #%L
- * ontop-obdalib-owlapi
+ * ontop-obdalib-core
  * %%
  * Copyright (C) 2009 - 2014 Free University of Bozen-Bolzano
  * %%
@@ -20,28 +20,34 @@ package it.unibz.inf.ontop.owlapi.resultset.utils;
  * #L%
  */
 
-import java.io.IOException;
-import java.io.Writer;
-import java.util.List;
+public class QueryControllerQuery extends QueryControllerEntity{
 
-public class OWLResultSetWriter {
+	private static final long serialVersionUID = 3885574857162247553L;
+	
+	private String id = "";
+	private String query = "";
+	
+	public QueryControllerQuery(String id) {
+		this.id = id;
+	}
+	
+	public String getID() {
+		return id;
+	}
 
-	public static void writeCSV(List<String[]> tabularData, Writer writer) throws IOException {
+	public void setQuery(String query) {
+		this.query = query;
+	}
 
-		// Print the CSV content
-		for (String[] rows : tabularData) {
-			StringBuilder line = new StringBuilder();
-			boolean needComma = false;
-			for (int i = 0; i < rows.length; i++) {
-				if (needComma) {
-					line.append(",");
-				}
-				line.append(rows[i]);
-				needComma = true;
-			}			
-			writer.write(line + "\n");
-			writer.flush();
-		}
-		writer.close();
+	public String getQuery() {
+		return query;
+	}
+
+	public String getNodeName() {
+		return id + ": " + query.toString();
+	}
+	
+	public String toString() {
+		return getNodeName();
 	}
 }
