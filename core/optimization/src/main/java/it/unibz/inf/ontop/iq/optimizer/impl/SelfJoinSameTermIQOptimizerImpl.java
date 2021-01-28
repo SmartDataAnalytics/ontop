@@ -20,9 +20,11 @@ import it.unibz.inf.ontop.utils.ImmutableCollectors;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Supplier;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -36,7 +38,8 @@ public class SelfJoinSameTermIQOptimizerImpl implements SelfJoinSameTermIQOptimi
     protected SelfJoinSameTermIQOptimizerImpl(OptimizationSingletons optimizationSingletons, IntermediateQueryFactory iqFactory) {
         this.iqFactory = iqFactory;
         this.lookForDistinctTransformer = new LookForDistinctTransformerImpl(
-                SameTermSelfJoinTransformer::new,
+//                SameTermSelfJoinTransformer::new,
+                (LookForDistinctTransformerImpl.CardinalityFreeTransformerConstructor) (discardedVariables, parentTransformer, optimizationSingletons1) -> new SameTermSelfJoinTransformer(discardedVariables, parentTransformer, optimizationSingletons1),
                 optimizationSingletons);
     }
 
@@ -163,4 +166,7 @@ public class SelfJoinSameTermIQOptimizerImpl implements SelfJoinSameTermIQOptimi
             return discardedVariables.containsAll(differentArguments);
         }
     }
+
+    @FunctionalInterface
+    public interface SerializableSupplier<T> extends Supplier<T>, Serializable {}
 }

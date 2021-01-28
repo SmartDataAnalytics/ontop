@@ -9,6 +9,8 @@ import it.unibz.inf.ontop.iq.transform.IQTreeTransformer;
 import it.unibz.inf.ontop.iq.transform.impl.DefaultRecursiveIQTreeVisitingTransformer;
 import it.unibz.inf.ontop.model.term.Variable;
 
+import java.io.Serializable;
+
 /**
  * TODO: find a better name
  */
@@ -38,7 +40,7 @@ class LookForDistinctTransformerImpl extends DefaultRecursiveIQTreeVisitingTrans
     }
 
     @FunctionalInterface
-    interface CardinalityFreeTransformerConstructor {
+    interface CardinalityFreeTransformerConstructor extends Serializable {
         IQTreeTransformer create(ImmutableSet<Variable> discardedVariables,
                                  IQTreeTransformer parentTransformer, OptimizationSingletons optimizationSingletons);
     }
