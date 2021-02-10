@@ -13,7 +13,7 @@ public class Serializers {
     private final static String CAST_TEMPLATE = "CAST(%s AS %s)";
 
     public static DBFunctionSymbolSerializer getRegularSerializer(String nameInDialect) {
-        return (terms, termConverter, termFactory) -> {
+        return (DBFunctionSymbolSerializer) (terms, termConverter, termFactory) -> {
             String parameterString = terms.stream()
                     .map(termConverter)
                     .collect(Collectors.joining(","));
@@ -22,7 +22,7 @@ public class Serializers {
     }
 
     public static DBFunctionSymbolSerializer getDistinctAggregationSerializer(String nameInDialect) {
-        return (terms, termConverter, termFactory) -> {
+        return (DBFunctionSymbolSerializer) (terms, termConverter, termFactory) -> {
             String parameterString = terms.stream()
                     .map(termConverter)
                     .collect(Collectors.joining(","));
@@ -33,7 +33,7 @@ public class Serializers {
     public static DBFunctionSymbolSerializer getOperatorSerializer(String operator) {
         String separator = String.format(" %s ", operator);
 
-        return (terms, termConverter, termFactory) -> {
+        return (DBFunctionSymbolSerializer) (terms, termConverter, termFactory) -> {
             String expression = terms.stream()
                     .map(termConverter)
                     .collect(Collectors.joining(separator));
@@ -42,7 +42,7 @@ public class Serializers {
     }
 
     public static DBFunctionSymbolSerializer getCastSerializer(DBTermType targetType) {
-        return (terms, termConverter, termFactory) -> String.format(
+        return (DBFunctionSymbolSerializer) (terms, termConverter, termFactory) -> String.format(
                 CAST_TEMPLATE, termConverter.apply(terms.get(0)), targetType.getCastName());
     }
 }

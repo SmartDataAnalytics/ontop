@@ -43,9 +43,9 @@ public class DBCountFunctionSymbolImpl extends AbstractDBAggregationFunctionSymb
 
     protected static DBFunctionSymbolSerializer get0arySerializer(boolean isDistinct) {
         if (isDistinct)
-            return (terms, termConverter, termFactory) -> "COUNT(DISTINCT(*))";
+            return (DBFunctionSymbolSerializer) (terms, termConverter, termFactory) -> "COUNT(DISTINCT(*))";
         else
-            return (terms, termConverter, termFactory) -> "COUNT(*)";
+            return (DBFunctionSymbolSerializer) (terms, termConverter, termFactory) -> "COUNT(*)";
     }
 
     @Override

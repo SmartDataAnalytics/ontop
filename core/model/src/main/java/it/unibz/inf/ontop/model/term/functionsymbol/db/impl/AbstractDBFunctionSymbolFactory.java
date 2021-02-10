@@ -1026,15 +1026,15 @@ public abstract class AbstractDBFunctionSymbolFactory implements DBFunctionSymbo
     }
 
     protected DBBooleanFunctionSymbol createContainsFunctionSymbol() {
-        return new DBContainsFunctionSymbolImpl(rootDBType, dbBooleanType, this::serializeContains);
+        return new DBContainsFunctionSymbolImpl(rootDBType, dbBooleanType, (DBFunctionSymbolSerializer)this::serializeContains);
     }
 
     protected DBFunctionSymbol createStrBeforeFunctionSymbol() {
-        return new DBStrBeforeFunctionSymbolImpl(dbStringType, rootDBType, this::serializeStrBefore);
+        return new DBStrBeforeFunctionSymbolImpl(dbStringType, rootDBType, (DBFunctionSymbolSerializer)this::serializeStrBefore);
     }
 
     protected DBFunctionSymbol createStrAfterFunctionSymbol() {
-        return new DBStrAfterFunctionSymbolImpl(dbStringType, rootDBType, this::serializeStrAfter);
+        return new DBStrAfterFunctionSymbolImpl(dbStringType, rootDBType, (DBFunctionSymbolSerializer)this::serializeStrAfter);
     }
 
     protected FalseOrNullFunctionSymbol createFalseOrNullFunctionSymbol(int arity) {
@@ -1046,19 +1046,19 @@ public abstract class AbstractDBFunctionSymbolFactory implements DBFunctionSymbo
     }
 
     protected DBFunctionSymbol createMD5FunctionSymbol() {
-        return new DBHashFunctionSymbolImpl("DB_MD5", rootDBType, dbStringType, this::serializeMD5);
+        return new DBHashFunctionSymbolImpl("DB_MD5", rootDBType, dbStringType, (DBFunctionSymbolSerializer)this::serializeMD5);
     }
 
     protected DBFunctionSymbol createSHA1FunctionSymbol() {
-        return new DBHashFunctionSymbolImpl("DB_SHA1", rootDBType, dbStringType, this::serializeSHA1);
+        return new DBHashFunctionSymbolImpl("DB_SHA1", rootDBType, dbStringType, (DBFunctionSymbolSerializer)this::serializeSHA1);
     }
 
     protected DBFunctionSymbol createSHA256FunctionSymbol() {
-        return new DBHashFunctionSymbolImpl("DB_SHA256", rootDBType, dbStringType, this::serializeSHA256);
+        return new DBHashFunctionSymbolImpl("DB_SHA256", rootDBType, dbStringType, (DBFunctionSymbolSerializer)this::serializeSHA256);
     }
 
     protected DBFunctionSymbol createSHA512FunctionSymbol() {
-        return new DBHashFunctionSymbolImpl("DB_SHA512", rootDBType, dbStringType, this::serializeSHA512);
+        return new DBHashFunctionSymbolImpl("DB_SHA512", rootDBType, dbStringType, (DBFunctionSymbolSerializer)this::serializeSHA512);
     }
 
     protected DBFunctionSymbol createYearFromDatetimeFunctionSymbol() {

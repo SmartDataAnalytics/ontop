@@ -24,7 +24,7 @@ public class ForcingFloatingDBAvgFunctionSymbolImpl extends NullIgnoringDBAvgFun
     }
 
     public static DBFunctionSymbolSerializer getRegularSerializer() {
-        return (terms, termConverter, termFactory) -> {
+        return (DBFunctionSymbolSerializer) (terms, termConverter, termFactory) -> {
             String parameterString = terms.stream()
                     .map(termConverter)
                     .collect(Collectors.joining(","));
@@ -33,7 +33,7 @@ public class ForcingFloatingDBAvgFunctionSymbolImpl extends NullIgnoringDBAvgFun
     }
 
     public static DBFunctionSymbolSerializer getDistinctAggregationSerializer() {
-        return (terms, termConverter, termFactory) -> {
+        return (DBFunctionSymbolSerializer) (terms, termConverter, termFactory) -> {
             String parameterString = terms.stream()
                     .map(termConverter)
                     .collect(Collectors.joining(","));
