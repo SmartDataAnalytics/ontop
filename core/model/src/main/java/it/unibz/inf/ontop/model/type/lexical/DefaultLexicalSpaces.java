@@ -3,11 +3,13 @@ package it.unibz.inf.ontop.model.type.lexical;
 import it.unibz.inf.ontop.model.type.DBTermType;
 import org.eclipse.rdf4j.model.datatypes.XMLDatatypeUtil;
 
-import java.io.Serializable;
 import java.util.Optional;
-import java.util.function.Function;
+import java.util.regex.Pattern;
 
 public class DefaultLexicalSpaces {
+
+    private static final Pattern UUID_PATTERN = Pattern.compile(
+            "^[0-9a-fA-F]{8}\\b-[0-9a-fA-F]{4}\\b-[0-9a-fA-F]{4}\\b-[0-9a-fA-F]{4}\\b-[0-9a-fA-F]{12}$");
 
    public static LexicalSpace getDefaultSpace(DBTermType.Category category) {
         switch (category) {
@@ -19,6 +21,8 @@ public class DefaultLexicalSpaces {
                 return DefaultLexicalSpaces::isValidDecimal;
             case FLOAT_DOUBLE:
                 return DefaultLexicalSpaces::isValidDouble;
+            case UUID:
+                return DefaultLexicalSpaces::isValidUUID;
             case BOOLEAN:
             case DATETIME:
             case OTHER:
@@ -49,6 +53,10 @@ public class DefaultLexicalSpaces {
 
     public static Optional<Boolean> isValidDouble(String lexicalValue) {
         return Optional.of(XMLDatatypeUtil.isValidDouble(lexicalValue));
+    }
+
+    public static Optional<Boolean> isValidUUID(String lexicalValue) {
+       return Optional.of(UUID_PATTERN.matcher(lexicalValue).matches());
     }
 
     public static Optional<Boolean> unknown(String lexicalValue) {

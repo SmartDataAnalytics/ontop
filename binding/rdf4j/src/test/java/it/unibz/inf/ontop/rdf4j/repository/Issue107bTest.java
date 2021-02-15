@@ -1,8 +1,8 @@
 package it.unibz.inf.ontop.rdf4j.repository;
 
 
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.ImmutableSet;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableMap;
+import it.unibz.inf.ontop.com.google.common.collect.ImmutableSet;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
