@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.google.common.collect.*;
+import it.unibz.inf.ontop.com.google.common.collect.*;
 import it.unibz.inf.ontop.dbschema.*;
 import it.unibz.inf.ontop.dbschema.impl.AbstractRelationDefinition;
 import it.unibz.inf.ontop.dbschema.impl.OntopViewDefinitionImpl;
