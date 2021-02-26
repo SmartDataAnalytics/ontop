@@ -355,7 +355,7 @@ public class R2RMLToSQLPPTriplesMapConverter {
 		@Override
 		protected NonVariableTerm onConstant(RDFTerm constant) {
 			return templateFactory.getConstant(
-							R2RMLVocabulary.resolveIri(((IRI)constant).getIRIString(), baseIri));
+					R2RMLVocabulary.resolveIri(((IRI)constant).getIRIString(), baseIri));
 		}
 		@Override
 		protected NonVariableTerm onTemplate(String template) {
