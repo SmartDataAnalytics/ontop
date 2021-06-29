@@ -22,7 +22,7 @@ public abstract class DefaultSchemaCatalogDBMetadataProvider extends AbstractDBM
 
     private final QuotedID defaultCatalog, defaultSchema;
 
-    DefaultSchemaCatalogDBMetadataProvider(Connection connection, QuotedIDFactoryFactory idFactoryProvider,
+    protected DefaultSchemaCatalogDBMetadataProvider(Connection connection, QuotedIDFactoryFactory idFactoryProvider,
                                            CoreSingletons coreSingletons, String sql) throws MetadataExtractionException {
         this(connection, idFactoryProvider, coreSingletons, c -> {
             try (Statement stmt = c.createStatement();
@@ -36,13 +36,13 @@ public abstract class DefaultSchemaCatalogDBMetadataProvider extends AbstractDBM
         });
     }
 
-    DefaultSchemaCatalogDBMetadataProvider(Connection connection, QuotedIDFactoryFactory idFactoryProvider,
+    protected DefaultSchemaCatalogDBMetadataProvider(Connection connection, QuotedIDFactoryFactory idFactoryProvider,
                                            CoreSingletons coreSingletons) throws MetadataExtractionException {
         this(connection, idFactoryProvider, coreSingletons,
                 c -> new String[] { c.getCatalog(), c.getSchema(), "DUMMY" });
     }
 
-    DefaultSchemaCatalogDBMetadataProvider(Connection connection, QuotedIDFactoryFactory idFactoryProvider,
+    protected DefaultSchemaCatalogDBMetadataProvider(Connection connection, QuotedIDFactoryFactory idFactoryProvider,
                                            CoreSingletons coreSingletons, DefaultRelationIdComponentsFactory defaultsFactory) throws MetadataExtractionException {
         super(connection, idFactoryProvider, coreSingletons);
         try {

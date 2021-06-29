@@ -32,7 +32,7 @@ public abstract class AbstractDBMetadataProvider implements DBMetadataProvider {
         String[] getDefaultRelationIdComponents(Connection c) throws SQLException;
     }
 
-    AbstractDBMetadataProvider(Connection connection, QuotedIDFactoryFactory idFactoryProvider,
+    protected AbstractDBMetadataProvider(Connection connection, QuotedIDFactoryFactory idFactoryProvider,
                                CoreSingletons coreSingletons) throws MetadataExtractionException {
         try {
             this.connection = connection;
