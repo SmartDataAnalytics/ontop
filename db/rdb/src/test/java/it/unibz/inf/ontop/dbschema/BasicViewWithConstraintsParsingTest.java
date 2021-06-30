@@ -2,19 +2,10 @@ package it.unibz.inf.ontop.dbschema;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
-import com.google.inject.Injector;
-import it.unibz.inf.ontop.exception.MetadataExtractionException;
-import it.unibz.inf.ontop.injection.OntopSQLCoreConfiguration;
 import it.unibz.inf.ontop.utils.ImmutableCollectors;
 import org.junit.Test;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.Reader;
 import java.util.Collection;
-import java.util.List;
-import java.util.stream.Collectors;
 
 import static org.junit.Assert.assertEquals;
 
@@ -22,7 +13,7 @@ public class BasicViewWithConstraintsParsingTest {
     private static final String VIEW_FILE = "src/test/resources/person/basic_views_with_constraints.json";
     private static final String DBMETADATA_FILE = "src/test/resources/person/person_with_constraints.db-extract.json";
 
-    ImmutableSet<OntopViewDefinition> viewDefinitions = loadViewDefinitions(VIEW_FILE, DBMETADATA_FILE);
+    ImmutableSet<OntopViewDefinition> viewDefinitions = ViewDefinitionParsingTest.loadViewDefinitions(VIEW_FILE, DBMETADATA_FILE);
 
     public BasicViewWithConstraintsParsingTest() throws Exception {
     }
@@ -131,37 +122,23 @@ public class BasicViewWithConstraintsParsingTest {
                 .map(ForeignKeyConstraint::getName)
                 .collect(ImmutableCollectors.toSet());
 
-        assertEquals(ImmutableSet.of("status_id_fkey"), fk_name);
+        assertEquals(ImmutableSet.of("status_id_fkey", "status_desc_fkey"), fk_name);
     }
 
-    protected ImmutableSet<OntopViewDefinition> loadViewDefinitions(String viewFilePath,
-                                                                    String dbMetadataFilePath)
-            throws Exception {
+    /**
+     * Composite foreign key
+     */
+    @Test
+    public void testCompositeForeignKey() throws Exception {
+        ImmutableList<String> destination_column = viewDefinitions.stream()
+                .map(RelationDefinition::getForeignKeys)
+                .flatMap(Collection::stream)
+                .filter(fk -> fk.getName().equals("status_desc_fkey"))
+                .map(ForeignKeyConstraint::getComponents)
+                .flatMap(Collection::stream)
+                .map(c -> c.getAttribute().getID().getName())
+                .collect(ImmutableCollectors.toList());
 
-        OntopSQLCoreConfiguration configuration = OntopSQLCoreConfiguration.defaultBuilder()
-                .jdbcUrl("jdbc:h2:mem:nowhere")
-                .jdbcDriver("org.h2.Driver")
-                .build();
-
-        Injector injector = configuration.getInjector();
-        SerializedMetadataProvider.Factory serializedMetadataProviderFactory = injector.getInstance(SerializedMetadataProvider.Factory.class);
-        OntopViewMetadataProvider.Factory viewMetadataProviderFactory = injector.getInstance(OntopViewMetadataProvider.Factory.class);
-
-        SerializedMetadataProvider dbMetadataProvider;
-        try (Reader dbMetadataReader = new FileReader(dbMetadataFilePath)) {
-            dbMetadataProvider = serializedMetadataProviderFactory.getMetadataProvider(dbMetadataReader);
-        }
-
-        OntopViewMetadataProvider viewMetadataProvider;
-        try (Reader viewReader = new FileReader(viewFilePath)) {
-            viewMetadataProvider = viewMetadataProviderFactory.getMetadataProvider(dbMetadataProvider, viewReader);
-        }
-
-        ImmutableMetadata metadata = ImmutableMetadata.extractImmutableMetadata(viewMetadataProvider);
-
-        return metadata.getAllRelations().stream()
-                .filter(r -> r instanceof OntopViewDefinition)
-                .map(r -> (OntopViewDefinition) r)
-                .collect(ImmutableCollectors.toSet());
+        assertEquals(ImmutableList.of("status", "statusDescription"), destination_column);
     }
 }
