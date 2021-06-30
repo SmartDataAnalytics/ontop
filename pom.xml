@@ -183,6 +183,7 @@
         <semargl-sesame.version>0.6.1</semargl-sesame.version>
         <semargl.version>0.7</semargl.version>
         <sesame.version>2.7.16</sesame.version>
+        <tomcat-embed-core.version>9.0.41</tomcat-embed-core.version>
         <h2.version>1.4.196</h2.version>
         <toml4j.version>0.7.2</toml4j.version>
 
@@ -740,6 +741,7 @@
                 <artifactId>spring-boot-starter-actuator</artifactId>
                 <version>${spring-boot.version}</version>
             </dependency>
+
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-devtools</artifactId>
@@ -1073,6 +1075,11 @@
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-api</artifactId>
                 <version>${junit-jupiter-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tomcat.embed</groupId>
+                <artifactId>tomcat-embed-core</artifactId>
+                <version>${tomcat-embed-core.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
